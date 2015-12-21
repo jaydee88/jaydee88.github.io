@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sails&#39;js 소개 및 시작하기 | Hexo</title>
+  <title>Sails&#39;js 소개 및 시작하기 | 센텀 박의 허술한 블로그</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 node.js기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 0.11.0이고 구글링 한국어로는 페이지가 몇">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sails'js 소개 및 시작하기">
-<meta property="og:url" content="http://yoursite.com/2015/07/28/getting-started-with-sailsjs/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://jaydee88.github.io/2015/07/28/getting-started-with-sailsjs/index.html">
+<meta property="og:site_name" content="센텀 박의 허술한 블로그">
 <meta property="og:description" content="최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 node.js기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 0.11.0이고 구글링 한국어로는 페이지가 몇">
-<meta property="og:image" content="http://yoursite.com/images/sailsjslogo.png">
+<meta property="og:image" content="http://jaydee88.github.io/images/sailsjslogo.png">
 <meta property="og:updated_time" content="2015-09-21T07:17:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sails'js 소개 및 시작하기">
 <meta name="twitter:description" content="최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 node.js기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 0.11.0이고 구글링 한국어로는 페이지가 몇">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="센텀 박의 허술한 블로그" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -35,8 +35,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">센텀 박의 허술한 블로그</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">console.blog(&quot;Centum Park&#39;s Hustle &amp; Flow&quot;)</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -55,7 +59,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jaydee88.github.io"></form>
       </div>
     </div>
   </div>
@@ -97,7 +101,7 @@
 </ul>
 <p>당근 자바스크립트 언어 구성이고, 내부적으로 Waterline이라는 ORM 플러그인을 내장하고 있어서 기존 Mysql과 같은 SQL기반 데이터베이스뿐만 아니라 MongoDB같은 noSQL 데이터베이스도 사용이 가능하고 모델을 통한 쿼리도 가능하다. 모바일 앱이나 게임에서 필요한 REST API 바로 생성할 수 있는 기능은 프로토타입핑하기엔 편리하다. 웹소켓 기능도 기본으로 들어가 있는데 아직까진 사용해본 적이 없어서 모르겠고 위 2가지 사항만으로도 충분한 강점이 있어 보인다. </p>
 <p>설치는 <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>으로 간편 설치.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -g install sails</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm -g install sails</span><br></pre></td></tr></table></figure>
 <p>npm을 사용하기 이전에 시스템에 node가 설치되어 있어야 한다. </p>
 <p>다음 포스트에서 간단하게 로그인 기능을 구현하는 방법을 올려 보겠다. </p>
 <p>sails’s 관련 링크 </p>
@@ -109,7 +113,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/28/getting-started-with-sailsjs/" data-id="ciifljdsn0015y0jczx34hbxs" class="article-share-link">Share</a>
+      <a data-url="http://jaydee88.github.io/2015/07/28/getting-started-with-sailsjs/" data-id="ciifllrgq0015rojcjkewvk9e" class="article-share-link">Share</a>
+      
+        <a href="http://jaydee88.github.io/2015/07/28/getting-started-with-sailsjs/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fullstack-framework/">fullstack framework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/getting-started/">getting started</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sails-js/">sails.js</a></li></ul>
@@ -140,6 +146,12 @@
   
 </article>
 
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -218,7 +230,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 John Doe<br>
+      &copy; 2015 Centum Park<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -232,6 +244,20 @@
   
 </nav>
     
+<script>
+  var disqus_shortname = 'jaydee88';
+  
+  var disqus_url = 'http://jaydee88.github.io/2015/07/28/getting-started-with-sailsjs/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 

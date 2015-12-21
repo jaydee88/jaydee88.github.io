@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Jenkins에서 자바 웹 프로젝트 자동 배포 | Hexo</title>
+  <title>Jenkins에서 자바 웹 프로젝트 자동 배포 | 센텀 박의 허술한 블로그</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="들어가기개발자로서 커리어를 처음 시작하고 모 은행 SI프로젝트에 가서 처음 주어졌던 일이 허드슨(지금은 이름이 바껴 Jenkins) 배포 관리였다. 현업이나 PL/PM들이 주로 아침에 개발서버와 스테이징 서버를 통해서 변경된 기능에 대해서 확인하고 이슈를 확인하는 식이였다. 문제는 개발자들이 야근하면서 로컬에서 작성한 코드들을 커밋하고 퇴근하면서 다른 컴포">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jenkins에서 자바 웹 프로젝트 자동 배포">
-<meta property="og:url" content="http://yoursite.com/2015/08/12/java-project-automated-deployment-in-jenkins/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://jaydee88.github.io/2015/08/12/java-project-automated-deployment-in-jenkins/index.html">
+<meta property="og:site_name" content="센텀 박의 허술한 블로그">
 <meta property="og:description" content="들어가기개발자로서 커리어를 처음 시작하고 모 은행 SI프로젝트에 가서 처음 주어졌던 일이 허드슨(지금은 이름이 바껴 Jenkins) 배포 관리였다. 현업이나 PL/PM들이 주로 아침에 개발서버와 스테이징 서버를 통해서 변경된 기능에 대해서 확인하고 이슈를 확인하는 식이였다. 문제는 개발자들이 야근하면서 로컬에서 작성한 코드들을 커밋하고 퇴근하면서 다른 컴포">
-<meta property="og:image" content="http://yoursite.com/images/jenkins_logo.png">
-<meta property="og:image" content="http://yoursite.com/images/github_conf.png">
+<meta property="og:image" content="http://jaydee88.github.io/images/jenkins_logo.png">
+<meta property="og:image" content="http://jaydee88.github.io/images/github_conf.png">
 <meta property="og:updated_time" content="2015-09-21T07:17:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jenkins에서 자바 웹 프로젝트 자동 배포">
 <meta name="twitter:description" content="들어가기개발자로서 커리어를 처음 시작하고 모 은행 SI프로젝트에 가서 처음 주어졌던 일이 허드슨(지금은 이름이 바껴 Jenkins) 배포 관리였다. 현업이나 PL/PM들이 주로 아침에 개발서버와 스테이징 서버를 통해서 변경된 기능에 대해서 확인하고 이슈를 확인하는 식이였다. 문제는 개발자들이 야근하면서 로컬에서 작성한 코드들을 커밋하고 퇴근하면서 다른 컴포">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="센텀 박의 허술한 블로그" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -36,8 +36,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">센텀 박의 허술한 블로그</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">console.blog(&quot;Centum Park&#39;s Hustle &amp; Flow&quot;)</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -56,7 +60,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jaydee88.github.io"></form>
       </div>
     </div>
   </div>
@@ -97,7 +101,7 @@
 <p>배포 시나리오는 Git Branch애 개발자가 개발 커밋을 푸시하면 Github 트리거가 발생해서 Jenkins의 웹훅을 호출하고, Jenkins의 스케줄러잡에서 해당 브랜치가 설정되어 있으면 연결된 Git Branch를 체크아웃 받아서 Gradle로 빌드하고 자바 클래스 파일을 War로 묶어서 개발서버에 배포 한다. 그리고 Jenkins 작업 마지막에 원격으로 개발서버에 접속해서 셸스크립트를 실행해서 개발서버 work directory에서 해당 브랜치의 파일들을 pulling해서 WAS의 document ROOT로 복사하는 식이다. </p>
 <p>사실 하고 나면 간단한 내용(실제로도 별 내용이 없다)인데 초보자일 경우 아마 환경적인 부분에서 삽질(X) 헤매는 경우가 있을거라 본다. 이런 부분들이나 지적사항은 댓글 남겨 주면 고맙겠다. </p>
 <h2 id="Jenkins_설정">Jenkins 설정</h2><p>1) 젠킨스 Github 플러그인 설치. “Jenkkins 관리”-“플러그인 관리” 화면서 Git/Github 연동 플러그인을 설치 한다. 아래는 실제 설치된 목록이다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Delivery Pipeline Plugin&#10;Visualisation of Delivery/Build Pipelines, renders pipelines based on upstream/downstream jobs. Full screen view for information radiators.&#10;0.9.5 0.9.4&#10;  &#10;GIT client plugin&#10;Shared library plugin for other Git related Jenkins plugins.&#10;1.18.0  1.17.1&#10;  &#10;GIT plugin&#10;This plugin allows use of Git as a build SCM. A recent Git runtime is required (1.7.9 minimum, 1.8.x recommended). Plugin is only tested on official git client. Use exotic installations at your own risks.&#10;2.4.0 2.3.5&#10;  &#10;GitHub API Plugin&#10;This plugin is a library plugin used by other GitHub related plugins to share the same libraries. This plugin does not have any user visible feature by itself. There&#39;s no need to install this plugin manually, although you want to keep it up to date.&#10;1.69  1.68&#10;  &#10;GitHub plugin&#10;This plugin integrates Jenkins with Github projects.&#10;1.12.0  1.11.3&#10;  &#10;Groovy&#10;This plugin adds the ability to directly execute Groovy code.&#10;1.27  1.25&#10;  &#10;Maven Integration plugin&#10;Jenkins plugin for building Maven 2/3 jobs via a special project type.&#10;2.11  2.10&#10;  &#10;SSH Slaves plugin&#10;This plugin allows you to manage slaves running on \*nix machines over SSH.&#10;1.10  1.9</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Delivery Pipeline Plugin&#10;Visualisation of Delivery/Build Pipelines, renders pipelines based on upstream/downstream jobs. Full screen view for information radiators.&#10;0.9.5 0.9.4&#10;  &#10;GIT client plugin&#10;Shared library plugin for other Git related Jenkins plugins.&#10;1.18.0  1.17.1&#10;  &#10;GIT plugin&#10;This plugin allows use of Git as a build SCM. A recent Git runtime is required (1.7.9 minimum, 1.8.x recommended). Plugin is only tested on official git client. Use exotic installations at your own risks.&#10;2.4.0 2.3.5&#10;  &#10;GitHub API Plugin&#10;This plugin is a library plugin used by other GitHub related plugins to share the same libraries. This plugin does not have any user visible feature by itself. There&#39;s no need to install this plugin manually, although you want to keep it up to date.&#10;1.69  1.68&#10;  &#10;GitHub plugin&#10;This plugin integrates Jenkins with Github projects.&#10;1.12.0  1.11.3&#10;  &#10;Groovy&#10;This plugin adds the ability to directly execute Groovy code.&#10;1.27  1.25&#10;  &#10;Maven Integration plugin&#10;Jenkins plugin for building Maven 2/3 jobs via a special project type.&#10;2.11  2.10&#10;  &#10;SSH Slaves plugin&#10;This plugin allows you to manage slaves running on \*nix machines over SSH.&#10;1.10  1.9</span><br></pre></td></tr></table></figure>
 <p>2) 새로운 스케줄러 잡 등록<br>젠킨스 첫 화면에서 “새로운 Item”을 클릭해서 새로운 스케줄 잡을 등록하자. 사용하는 Jenkins가 한글화되어 있어서 영어 단어와 다를 수 있으니 유의하길 바란다.<br>그리고 스케줄러 잡에는 왠만하면 공백을 넣지 않도록 한다. 잡 이름이 시스템상의 경로가 될 수 있기에 편의상 공백없는 이름을 추천 한다. </p>
 <ul>
 <li>기본 정보 “Github project”에서 Git Repository 주로 입력</li>
@@ -105,16 +109,16 @@
 <li>Build항목에서 Invoke Gradle 항목을 선택한다 실행 권한 문제로 Jenkins에서 제공하는 Gradle를 사용했다. “Tasks”는 컴파일 빼곤 다른 게 없어 “build”를 입력하고 “ROOT build script”에서 Gradle 스크립트과 위치한 경로를 기입 한다. </li>
 </ul>
 <p>레드햇 리눅스에 yum으로 설치된 젠킨스일 경우 아래 경우에는 gradle스크립트를 위치해 놓는다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/jenkins/<span class="built_in">jobs</span>/(Jenkins 스케줄러 이름)/workspace</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/var/lib/jenkins/<span class="built_in">jobs</span>/(Jenkins 스케줄러 이름)/workspace</span><br></pre></td></tr></table></figure>
 <p>아주 간단한 Gradle 스크립트다. 빌드에서 class파일을 build/bin으로 타겟디렉토리를 지정 한다. 자바 웹 프로젝트이기 때문에 서블릿 jar파일을 빌드 클래스패스에 추가 했다. </p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">'java'</span></span><br><span class="line">apply plugin: <span class="string">'war'</span></span><br><span class="line">apply plugin: <span class="string">'distribution'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">sourceSets</span> &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        output.classesDir   = <span class="string">'build/bin'</span></span><br><span class="line">        output.resourcesDir = <span class="string">'build/bin'</span></span><br><span class="line">        java &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">        resources &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// In this section you declare where to find the dependencies of your project</span></span><br><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">    <span class="comment">// Use 'maven central' for resolving your dependencies.</span></span><br><span class="line">    <span class="comment">// You can declare any Maven/Ivy/file repository here.</span></span><br><span class="line">    mavenCentral()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// In this section you declare the dependencies for your production and test code</span></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="comment">// The production code uses the SLF4J logging API at compile time</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'org.slf4j:slf4j-api:1.7.5'</span></span><br><span class="line">    providedCompile <span class="string">'javax.servlet:servlet-api:2.5'</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(dir: <span class="string">'lib'</span>, <span class="keyword">include</span>: <span class="string">'*.jar'</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">apply plugin: <span class="string">'java'</span></span><br><span class="line">apply plugin: <span class="string">'war'</span></span><br><span class="line">apply plugin: <span class="string">'distribution'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">sourceSets</span> &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        output.classesDir   = <span class="string">'build/bin'</span></span><br><span class="line">        output.resourcesDir = <span class="string">'build/bin'</span></span><br><span class="line">        java &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">        resources &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// In this section you declare where to find the dependencies of your project</span></span><br><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">    <span class="comment">// Use 'maven central' for resolving your dependencies.</span></span><br><span class="line">    <span class="comment">// You can declare any Maven/Ivy/file repository here.</span></span><br><span class="line">    mavenCentral()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// In this section you declare the dependencies for your production and test code</span></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="comment">// The production code uses the SLF4J logging API at compile time</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'org.slf4j:slf4j-api:1.7.5'</span></span><br><span class="line">    providedCompile <span class="string">'javax.servlet:servlet-api:2.5'</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(dir: <span class="string">'lib'</span>, <span class="keyword">include</span>: <span class="string">'*.jar'</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>다시 Jenkins 스케줄러 화면에서 “빌드 후 조치” 섹션에서 “Send build artifacts over SSH”항목에 개발 서버에 배포할 파일, 여기서는 빌드한 클래스 파일은 build/bin밑에 war파일을 sftp방식으로 배포할려고 한다. 배포한 파일을 ssh로 셸스크립트를 이용해서 archive 해제해서 웹루트에 복사 한다. 항복별로 보면 “Transfers”-“Transfer Set Source files”에서 <code>&quot;**/*.war&quot;,</code>입력했고 exec command 에서 셸스크립트의 경로를 지정했다. 참 SSH Server는 미리 Jenkins 전역 설정 화면에서 미리 추가해 놓아야 한다. 나 같은 경우 Jenkins-&gt;개발서버로 SSH로 접속시에 공개키로 ssh접속이 가능토록 미리 설정해 놓아서 따로 인증 정보를 추가할 필요가 없다. 이런 방식으로 하길 권한다. </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/tomcat/deploy/sh/runapp.sh;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/home/tomcat/deploy/sh/runapp.sh;</span><br></pre></td></tr></table></figure>
 <p>나머지 정보는 환경에 맞도록 입력하고 저장 한다. Jenkins에서 “Build Now”를 선택해서 해당 잡의 Console 로그 화면에서 Git까지 체크아웃하고 Gradle까지 실행되었다면 거의 다 한셈이다. </p>
 <p>이젠 빌드후에 개발서버에서 실행된 셸스크립트 파일을 간단하게 만들어 봤다. 위에서 설정한 <code>runapp.sh</code>의 내용이다. Git에서 프로젝트 소스를 체크아웃해서 워크디렉토리를 통해 pulling 받은 소스를 웹루트에 복사하는 스크립트이다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> home/tomcat/webapps/app/ROOT;</span><br><span class="line">jar -xf /home/tomcat/webapps/app/ROOT/build/libs/workspace.war</span><br><span class="line">rm -rf /home/tomcat/webapps/app/ROOT/build/;</span><br><span class="line"><span class="comment"># 워킹 디렉토리에서 Git pulling</span></span><br><span class="line"><span class="built_in">cd</span> /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web;</span><br><span class="line">git checkout develop;</span><br><span class="line">git pull;</span><br><span class="line"><span class="comment"># 웹루트로 카피</span></span><br><span class="line">cp -rf /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web/* /home/tomcat/webapps/app/ROOT/;</span><br><span class="line"><span class="comment"># tomcat 컨테이너 재기동</span></span><br><span class="line">/home/tomcat/tomcat7/bin/shutdown.sh;</span><br><span class="line">/home/tomcat/tomcat7/bin/startup.sh;</span><br><span class="line"><span class="comment"># 슬랙 웹훅으로 빌드 성공 메시지를 전송하면 더 좋다. </span></span><br><span class="line">curl -X POST --data-urlencode <span class="string">'payload=&#123;"channel": "#server_room", "username": "bot", "text": ":ok_hand::ok_hand:deploy complete.", "icon_emoji": ":ok_hand:"&#125;'</span> (웹훅 URL) &gt; /dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> home/tomcat/webapps/app/ROOT;</span><br><span class="line">jar -xf /home/tomcat/webapps/app/ROOT/build/libs/workspace.war</span><br><span class="line">rm -rf /home/tomcat/webapps/app/ROOT/build/;</span><br><span class="line"><span class="comment"># 워킹 디렉토리에서 Git pulling</span></span><br><span class="line"><span class="built_in">cd</span> /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web;</span><br><span class="line">git checkout develop;</span><br><span class="line">git pull;</span><br><span class="line"><span class="comment"># 웹루트로 카피</span></span><br><span class="line">cp -rf /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web/* /home/tomcat/webapps/app/ROOT/;</span><br><span class="line"><span class="comment"># tomcat 컨테이너 재기동</span></span><br><span class="line">/home/tomcat/tomcat7/bin/shutdown.sh;</span><br><span class="line">/home/tomcat/tomcat7/bin/startup.sh;</span><br><span class="line"><span class="comment"># 슬랙 웹훅으로 빌드 성공 메시지를 전송하면 더 좋다. </span></span><br><span class="line">curl -X POST --data-urlencode <span class="string">'payload=&#123;"channel": "#server_room", "username": "bot", "text": ":ok_hand::ok_hand:deploy complete.", "icon_emoji": ":ok_hand:"&#125;'</span> (웹훅 URL) &gt; /dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>다시 Jenkins로 돌아와서 “Build Now”로 빌드를 실행해서 결과를 확인 한다. </p>
 <h2 id="Github_설정">Github 설정</h2><p>브랜치에 push이벤트가 발생하면 위 Jenkins가 빌드 잡을 실행하도록 서비스 훅 설정이 필요하다. 해당 리파지터리 “Settings”메뉴에서 “Webhooks &amp; Services”메뉴를 선택하고 아래 “Service” 항목에서 Jenkins 정보를 추가 하자. </p>
 <p><img src="/images/github_conf.png" alt="Github hook service"></p>
@@ -124,7 +128,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/12/java-project-automated-deployment-in-jenkins/" data-id="ciifljds6000xy0jcyes1xlrt" class="article-share-link">Share</a>
+      <a data-url="http://jaydee88.github.io/2015/08/12/java-project-automated-deployment-in-jenkins/" data-id="ciifllrg1000xrojc8h732n3r" class="article-share-link">Share</a>
+      
+        <a href="http://jaydee88.github.io/2015/08/12/java-project-automated-deployment-in-jenkins/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/automated-deployment/">automated deployment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ci/">ci</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jenkins/">jenkins</a></li></ul>
@@ -155,6 +161,12 @@
   
 </article>
 
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -233,7 +245,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 John Doe<br>
+      &copy; 2015 Centum Park<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -247,6 +259,20 @@
   
 </nav>
     
+<script>
+  var disqus_shortname = 'jaydee88';
+  
+  var disqus_url = 'http://jaydee88.github.io/2015/08/12/java-project-automated-deployment-in-jenkins/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 

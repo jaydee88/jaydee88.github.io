@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Hexo]]></title>
-  
+  <title><![CDATA[센텀 박의 허술한 블로그]]></title>
+  <subtitle><![CDATA[console.blog("Centum Park's Hustle & Flow")]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
+  <link href="http://jaydee88.github.io/"/>
   <updated>2015-09-21T07:17:23.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://jaydee88.github.io/</id>
   
   <author>
-    <name><![CDATA[John Doe]]></name>
+    <name><![CDATA[Centum Park]]></name>
     
   </author>
   
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Amazon Dash]]></title>
-    <link href="http://yoursite.com/2015/09/10/Amazon-Dash/"/>
-    <id>http://yoursite.com/2015/09/10/Amazon-Dash/</id>
+    <link href="http://jaydee88.github.io/2015/09/10/Amazon-Dash/"/>
+    <id>http://jaydee88.github.io/2015/09/10/Amazon-Dash/</id>
     <published>2015-09-10T09:35:33.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>오랫만에 포스팅한다. 물론 그 사이에 내 블로그에 올라온 댓글도 없다. ㅜ.ㅜ</p>
@@ -33,20 +33,20 @@
 <p>요즘 <a href="http://blog.weirdx.io/" target="_blank" rel="external">이상한 모임</a> 슬랙에서 만난 ]]>
     </summary>
     
-      <category term="Amazon Dash" scheme="http://yoursite.com/tags/Amazon-Dash/"/>
+      <category term="Amazon Dash" scheme="http://jaydee88.github.io/tags/Amazon-Dash/"/>
     
-      <category term="IOT" scheme="http://yoursite.com/tags/IOT/"/>
+      <category term="IOT" scheme="http://jaydee88.github.io/tags/IOT/"/>
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+      <category term="Python" scheme="http://jaydee88.github.io/tags/Python/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Startup Meetup in BUSAN (15년 8월 13일)]]></title>
-    <link href="http://yoursite.com/2015/08/14/Startup-Meetup-in-BUSAN/"/>
-    <id>http://yoursite.com/2015/08/14/Startup-Meetup-in-BUSAN/</id>
+    <link href="http://jaydee88.github.io/2015/08/14/Startup-Meetup-in-BUSAN/"/>
+    <id>http://jaydee88.github.io/2015/08/14/Startup-Meetup-in-BUSAN/</id>
     <published>2015-08-14T08:22:26.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>얼마전 포스트에서 <a href="/2015/07/27/Busan-Startup-Cafe/">부산 스타트업 카페 개소소식을</a> 전해 드렸는데 얼마전에 온오프믹스를 통해서 스타트업 미트업이 있다는 이야기를 듣고 다녀왔습니다. </p>
@@ -67,18 +67,18 @@
 <p><a]]>
     </summary>
     
-      <category term="busan" scheme="http://yoursite.com/tags/busan/"/>
+      <category term="busan" scheme="http://jaydee88.github.io/tags/busan/"/>
     
-      <category term="startup" scheme="http://yoursite.com/tags/startup/"/>
+      <category term="startup" scheme="http://jaydee88.github.io/tags/startup/"/>
     
-      <category term="Startup" scheme="http://yoursite.com/categories/Startup/"/>
+      <category term="Startup" scheme="http://jaydee88.github.io/categories/Startup/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Jenkins에서 자바 웹 프로젝트 자동 배포]]></title>
-    <link href="http://yoursite.com/2015/08/12/java-project-automated-deployment-in-jenkins/"/>
-    <id>http://yoursite.com/2015/08/12/java-project-automated-deployment-in-jenkins/</id>
+    <link href="http://jaydee88.github.io/2015/08/12/java-project-automated-deployment-in-jenkins/"/>
+    <id>http://jaydee88.github.io/2015/08/12/java-project-automated-deployment-in-jenkins/</id>
     <published>2015-08-12T08:11:56.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p><img src="/images/jenkins_logo.png" alt="Jenkins logo"></p>
@@ -90,7 +90,7 @@
 <p>배포 시나리오는 Git Branch애 개발자가 개발 커밋을 푸시하면 Github 트리거가 발생해서 Jenkins의 웹훅을 호출하고, Jenkins의 스케줄러잡에서 해당 브랜치가 설정되어 있으면 연결된 Git Branch를 체크아웃 받아서 Gradle로 빌드하고 자바 클래스 파일을 War로 묶어서 개발서버에 배포 한다. 그리고 Jenkins 작업 마지막에 원격으로 개발서버에 접속해서 셸스크립트를 실행해서 개발서버 work directory에서 해당 브랜치의 파일들을 pulling해서 WAS의 document ROOT로 복사하는 식이다. </p>
 <p>사실 하고 나면 간단한 내용(실제로도 별 내용이 없다)인데 초보자일 경우 아마 환경적인 부분에서 삽질(X) 헤매는 경우가 있을거라 본다. 이런 부분들이나 지적사항은 댓글 남겨 주면 고맙겠다. </p>
 <h2 id="Jenkins_설정">Jenkins 설정</h2><p>1) 젠킨스 Github 플러그인 설치. “Jenkkins 관리”-“플러그인 관리” 화면서 Git/Github 연동 플러그인을 설치 한다. 아래는 실제 설치된 목록이다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Delivery Pipeline Plugin&#10;Visualisation of Delivery/Build Pipelines, renders pipelines based on upstream/downstream jobs. Full screen view for information radiators.&#10;0.9.5 0.9.4&#10;  &#10;GIT client plugin&#10;Shared library plugin for other Git related Jenkins plugins.&#10;1.18.0  1.17.1&#10;  &#10;GIT plugin&#10;This plugin allows use of Git as a build SCM. A recent Git runtime is required (1.7.9 minimum, 1.8.x recommended). Plugin is only tested on official git client. Use exotic installations at your own risks.&#10;2.4.0 2.3.5&#10;  &#10;GitHub API Plugin&#10;This plugin is a library plugin used by other GitHub related plugins to share the same libraries. This plugin does not have any user visible feature by itself. There&#39;s no need to install this plugin manually, although you want to keep it up to date.&#10;1.69  1.68&#10;  &#10;GitHub plugin&#10;This plugin integrates Jenkins with Github projects.&#10;1.12.0  1.11.3&#10;  &#10;Groovy&#10;This plugin adds the ability to directly execute Groovy code.&#10;1.27  1.25&#10;  &#10;Maven Integration plugin&#10;Jenkins plugin for building Maven 2/3 jobs via a special project type.&#10;2.11  2.10&#10;  &#10;SSH Slaves plugin&#10;This plugin allows you to manage slaves running on \*nix machines over SSH.&#10;1.10  1.9</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Delivery Pipeline Plugin&#10;Visualisation of Delivery/Build Pipelines, renders pipelines based on upstream/downstream jobs. Full screen view for information radiators.&#10;0.9.5 0.9.4&#10;  &#10;GIT client plugin&#10;Shared library plugin for other Git related Jenkins plugins.&#10;1.18.0  1.17.1&#10;  &#10;GIT plugin&#10;This plugin allows use of Git as a build SCM. A recent Git runtime is required (1.7.9 minimum, 1.8.x recommended). Plugin is only tested on official git client. Use exotic installations at your own risks.&#10;2.4.0 2.3.5&#10;  &#10;GitHub API Plugin&#10;This plugin is a library plugin used by other GitHub related plugins to share the same libraries. This plugin does not have any user visible feature by itself. There&#39;s no need to install this plugin manually, although you want to keep it up to date.&#10;1.69  1.68&#10;  &#10;GitHub plugin&#10;This plugin integrates Jenkins with Github projects.&#10;1.12.0  1.11.3&#10;  &#10;Groovy&#10;This plugin adds the ability to directly execute Groovy code.&#10;1.27  1.25&#10;  &#10;Maven Integration plugin&#10;Jenkins plugin for building Maven 2/3 jobs via a special project type.&#10;2.11  2.10&#10;  &#10;SSH Slaves plugin&#10;This plugin allows you to manage slaves running on \*nix machines over SSH.&#10;1.10  1.9</span><br></pre></td></tr></table></figure>
 <p>2) 새로운 스케줄러 잡 등록<br>젠킨스 첫 화면에서 “새로운 Item”을 클릭해서 새로운 스케줄 잡을 등록하자. 사용하는 Jenkins가 한글화되어 있어서 영어 단어와 다를 수 있으니 유의하길 바란다.<br>그리고 스케줄러 잡에는 왠만하면 공백을 넣지 않도록 한다. 잡 이름이 시스템상의 경로가 될 수 있기에 편의상 공백없는 이름을 추천 한다. </p>
 <ul>
 <li>기본 정보 “Github project”에서 Git Repository 주로 입력</li>
@@ -98,16 +98,16 @@
 <li>Build항목에서 Invoke Gradle 항목을 선택한다 실행 권한 문제로 Jenkins에서 제공하는 Gradle를 사용했다. “Tasks”는 컴파일 빼곤 다른 게 없어 “build”를 입력하고 “ROOT build script”에서 Gradle 스크립트과 위치한 경로를 기입 한다. </li>
 </ul>
 <p>레드햇 리눅스에 yum으로 설치된 젠킨스일 경우 아래 경우에는 gradle스크립트를 위치해 놓는다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/jenkins/<span class="built_in">jobs</span>/(Jenkins 스케줄러 이름)/workspace</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/var/lib/jenkins/<span class="built_in">jobs</span>/(Jenkins 스케줄러 이름)/workspace</span><br></pre></td></tr></table></figure>
 <p>아주 간단한 Gradle 스크립트다. 빌드에서 class파일을 build/bin으로 타겟디렉토리를 지정 한다. 자바 웹 프로젝트이기 때문에 서블릿 jar파일을 빌드 클래스패스에 추가 했다. </p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">'java'</span></span><br><span class="line">apply plugin: <span class="string">'war'</span></span><br><span class="line">apply plugin: <span class="string">'distribution'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">sourceSets</span> &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        output.classesDir   = <span class="string">'build/bin'</span></span><br><span class="line">        output.resourcesDir = <span class="string">'build/bin'</span></span><br><span class="line">        java &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">        resources &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// In this section you declare where to find the dependencies of your project</span></span><br><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">    <span class="comment">// Use 'maven central' for resolving your dependencies.</span></span><br><span class="line">    <span class="comment">// You can declare any Maven/Ivy/file repository here.</span></span><br><span class="line">    mavenCentral()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// In this section you declare the dependencies for your production and test code</span></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="comment">// The production code uses the SLF4J logging API at compile time</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'org.slf4j:slf4j-api:1.7.5'</span></span><br><span class="line">    providedCompile <span class="string">'javax.servlet:servlet-api:2.5'</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(dir: <span class="string">'lib'</span>, <span class="keyword">include</span>: <span class="string">'*.jar'</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">apply plugin: <span class="string">'java'</span></span><br><span class="line">apply plugin: <span class="string">'war'</span></span><br><span class="line">apply plugin: <span class="string">'distribution'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">sourceSets</span> &#123;</span><br><span class="line">    main &#123;</span><br><span class="line">        output.classesDir   = <span class="string">'build/bin'</span></span><br><span class="line">        output.resourcesDir = <span class="string">'build/bin'</span></span><br><span class="line">        java &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">        resources &#123;</span><br><span class="line">            srcDir <span class="string">'src'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// In this section you declare where to find the dependencies of your project</span></span><br><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">    <span class="comment">// Use 'maven central' for resolving your dependencies.</span></span><br><span class="line">    <span class="comment">// You can declare any Maven/Ivy/file repository here.</span></span><br><span class="line">    mavenCentral()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// In this section you declare the dependencies for your production and test code</span></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="comment">// The production code uses the SLF4J logging API at compile time</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'org.slf4j:slf4j-api:1.7.5'</span></span><br><span class="line">    providedCompile <span class="string">'javax.servlet:servlet-api:2.5'</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(dir: <span class="string">'lib'</span>, <span class="keyword">include</span>: <span class="string">'*.jar'</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>다시 Jenkins 스케줄러 화면에서 “빌드 후 조치” 섹션에서 “Send build artifacts over SSH”항목에 개발 서버에 배포할 파일, 여기서는 빌드한 클래스 파일은 build/bin밑에 war파일을 sftp방식으로 배포할려고 한다. 배포한 파일을 ssh로 셸스크립트를 이용해서 archive 해제해서 웹루트에 복사 한다. 항복별로 보면 “Transfers”-“Transfer Set Source files”에서 <code>&quot;**/*.war&quot;,</code>입력했고 exec command 에서 셸스크립트의 경로를 지정했다. 참 SSH Server는 미리 Jenkins 전역 설정 화면에서 미리 추가해 놓아야 한다. 나 같은 경우 Jenkins-&gt;개발서버로 SSH로 접속시에 공개키로 ssh접속이 가능토록 미리 설정해 놓아서 따로 인증 정보를 추가할 필요가 없다. 이런 방식으로 하길 권한다. </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/home/tomcat/deploy/sh/runapp.sh;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/home/tomcat/deploy/sh/runapp.sh;</span><br></pre></td></tr></table></figure>
 <p>나머지 정보는 환경에 맞도록 입력하고 저장 한다. Jenkins에서 “Build Now”를 선택해서 해당 잡의 Console 로그 화면에서 Git까지 체크아웃하고 Gradle까지 실행되었다면 거의 다 한셈이다. </p>
 <p>이젠 빌드후에 개발서버에서 실행된 셸스크립트 파일을 간단하게 만들어 봤다. 위에서 설정한 <code>runapp.sh</code>의 내용이다. Git에서 프로젝트 소스를 체크아웃해서 워크디렉토리를 통해 pulling 받은 소스를 웹루트에 복사하는 스크립트이다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> home/tomcat/webapps/app/ROOT;</span><br><span class="line">jar -xf /home/tomcat/webapps/app/ROOT/build/libs/workspace.war</span><br><span class="line">rm -rf /home/tomcat/webapps/app/ROOT/build/;</span><br><span class="line"><span class="comment"># 워킹 디렉토리에서 Git pulling</span></span><br><span class="line"><span class="built_in">cd</span> /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web;</span><br><span class="line">git checkout develop;</span><br><span class="line">git pull;</span><br><span class="line"><span class="comment"># 웹루트로 카피</span></span><br><span class="line">cp -rf /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web/* /home/tomcat/webapps/app/ROOT/;</span><br><span class="line"><span class="comment"># tomcat 컨테이너 재기동</span></span><br><span class="line">/home/tomcat/tomcat7/bin/shutdown.sh;</span><br><span class="line">/home/tomcat/tomcat7/bin/startup.sh;</span><br><span class="line"><span class="comment"># 슬랙 웹훅으로 빌드 성공 메시지를 전송하면 더 좋다. </span></span><br><span class="line">curl -X POST --data-urlencode <span class="string">'payload=&#123;"channel": "#server_room", "username": "bot", "text": ":ok_hand::ok_hand:deploy complete.", "icon_emoji": ":ok_hand:"&#125;'</span> (웹훅 URL) &gt; /dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> home/tomcat/webapps/app/ROOT;</span><br><span class="line">jar -xf /home/tomcat/webapps/app/ROOT/build/libs/workspace.war</span><br><span class="line">rm -rf /home/tomcat/webapps/app/ROOT/build/;</span><br><span class="line"><span class="comment"># 워킹 디렉토리에서 Git pulling</span></span><br><span class="line"><span class="built_in">cd</span> /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web;</span><br><span class="line">git checkout develop;</span><br><span class="line">git pull;</span><br><span class="line"><span class="comment"># 웹루트로 카피</span></span><br><span class="line">cp -rf /home/tomcat/deploy/(프로젝트 체크아웃 디렉토리)/web/* /home/tomcat/webapps/app/ROOT/;</span><br><span class="line"><span class="comment"># tomcat 컨테이너 재기동</span></span><br><span class="line">/home/tomcat/tomcat7/bin/shutdown.sh;</span><br><span class="line">/home/tomcat/tomcat7/bin/startup.sh;</span><br><span class="line"><span class="comment"># 슬랙 웹훅으로 빌드 성공 메시지를 전송하면 더 좋다. </span></span><br><span class="line">curl -X POST --data-urlencode <span class="string">'payload=&#123;"channel": "#server_room", "username": "bot", "text": ":ok_hand::ok_hand:deploy complete.", "icon_emoji": ":ok_hand:"&#125;'</span> (웹훅 URL) &gt; /dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>다시 Jenkins로 돌아와서 “Build Now”로 빌드를 실행해서 결과를 확인 한다. </p>
 <h2 id="Github_설정">Github 설정</h2><p>브랜치에 push이벤트가 발생하면 위 Jenkins가 빌드 잡을 실행하도록 서비스 훅 설정이 필요하다. 해당 리파지터리 “Settings”메뉴에서 “Webhooks &amp; Services”메뉴를 선택하고 아래 “Service” 항목에서 Jenkins 정보를 추가 하자. </p>
 <p><img src="/images/github_conf.png" alt="Github hook service"></p>
@@ -119,28 +119,28 @@
 <h2 id="들어가기">들어가기</h2><p>개발자로서 커리어를 처음 시작하고 모 은행 SI프로젝트에 가서 처음 주어졌던 일이 허드슨(지]]>
     </summary>
     
-      <category term="automated deployment" scheme="http://yoursite.com/tags/automated-deployment/"/>
+      <category term="automated deployment" scheme="http://jaydee88.github.io/tags/automated-deployment/"/>
     
-      <category term="ci" scheme="http://yoursite.com/tags/ci/"/>
+      <category term="ci" scheme="http://jaydee88.github.io/tags/ci/"/>
     
-      <category term="jenkins" scheme="http://yoursite.com/tags/jenkins/"/>
+      <category term="jenkins" scheme="http://jaydee88.github.io/tags/jenkins/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo Disqus 위젯 추가]]></title>
-    <link href="http://yoursite.com/2015/08/03/disqus-comment-widget/"/>
-    <id>http://yoursite.com/2015/08/03/disqus-comment-widget/</id>
+    <link href="http://jaydee88.github.io/2015/08/03/disqus-comment-widget/"/>
+    <id>http://jaydee88.github.io/2015/08/03/disqus-comment-widget/</id>
     <published>2015-08-03T09:02:39.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
-    <content type="html"><![CDATA[<p>블로그에 <a href="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/#comment-2171328557" target="_blank" rel="external">첫 댓글 등록 기념으로</a> 블로그 사이드바에 최신 댓글 불러오는 위젯을 추가 했다. 물론 그래봤자 불러올 댓글이 하나밖에 없다. -_ -;</p>
+    <content type="html"><![CDATA[<p>블로그에 <a href="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/#comment-2171328557">첫 댓글 등록 기념으로</a> 블로그 사이드바에 최신 댓글 불러오는 위젯을 추가 했다. 물론 그래봤자 불러올 댓글이 하나밖에 없다. -_ -;</p>
 <p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>에서는 disqus 코멘트를 기본으로 지원하는데 내가 사용하는 테마(landscape, 기본 테마)에서는 최신 댓글을 보여주는 위젯이 없어서 만들어야 했다. </p>
 <ul>
 <li><code>/blog/themes/landscape/layout/_widget/</code>    경로에 <code>comment.ejs</code>를 만들고 아래의 내용을 넣었다.</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"widget-wrap"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"widget-title dsq-widget"</span>&gt;</span>Recent Comments<span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"widget"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://본인disqus숏네임.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_mods=0&amp;hide_avatars=0&amp;avatar_size=32&amp;excerpt_length=50"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"widget-wrap"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"widget-title dsq-widget"</span>&gt;</span>Recent Comments<span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"widget"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://본인disqus숏네임.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_mods=0&amp;hide_avatars=0&amp;avatar_size=32&amp;excerpt_length=50"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>disqus의 스크립트를 불러올 때 파라미터로 설정을 변경할 수 있는데 아래와 같다. </p>
 <ul>
 <li>num_item : 불러올 댓글 개수. 기본 5개</li>
@@ -153,23 +153,23 @@
 <p><img src="/images/1411482120.jpg" alt="민망"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>블로그에 <a href="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/#comment-2171328557" target="_blank" rel="external">첫 댓]]>
+    <![CDATA[<p>블로그에 <a href="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/#comment-2171328557">첫 댓글 등록 기념으로</a> 블로그 사이드바에 최신 댓글 불]]>
     </summary>
     
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+      <category term="blog" scheme="http://jaydee88.github.io/tags/blog/"/>
     
-      <category term="disqus" scheme="http://yoursite.com/tags/disqus/"/>
+      <category term="disqus" scheme="http://jaydee88.github.io/tags/disqus/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://jaydee88.github.io/tags/hexo/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[node.js로 like한 tumblr 사진, 동영상 백업]]></title>
-    <link href="http://yoursite.com/2015/08/02/simple-node-js-script-for-download-tumblr-likes/"/>
-    <id>http://yoursite.com/2015/08/02/simple-node-js-script-for-download-tumblr-likes/</id>
+    <link href="http://jaydee88.github.io/2015/08/02/simple-node-js-script-for-download-tumblr-likes/"/>
+    <id>http://jaydee88.github.io/2015/08/02/simple-node-js-script-for-download-tumblr-likes/</id>
     <published>2015-08-01T19:14:57.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>맥에서 내가 ‘like’한 텀블러 포스트의 이미지와 동영상만 백업하고 싶은데 구글링해보면 윈도우 프로그램이 몇 있거나, 전체를 백업하는 용도로만 있는 거 같다. 그래서 간단한 node.js로 간단한 스크립트를 만들었다. 개인적으로 node.js를 공부한 지 얼마 안되었으므로 태클달기 있귀업귀.</p>
@@ -190,28 +190,28 @@
     <![CDATA[<p>맥에서 내가 ‘like’한 텀블러 포스트의 이미지와 동영상만 백업하고 싶은데 구글링해보면 윈도우 프로그램이 몇 있거나, 전체를 백업하는 용도로만 있는 거 같다. 그래서 간단한 node.js로 간단한 스크립트를 만들었다. 개인적으로 node.js를]]>
     </summary>
     
-      <category term="backup" scheme="http://yoursite.com/tags/backup/"/>
+      <category term="backup" scheme="http://jaydee88.github.io/tags/backup/"/>
     
-      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="http://jaydee88.github.io/tags/nodejs/"/>
     
-      <category term="tumblr" scheme="http://yoursite.com/tags/tumblr/"/>
+      <category term="tumblr" scheme="http://jaydee88.github.io/tags/tumblr/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[터미널에서 마크다운 문서 보기]]></title>
-    <link href="http://yoursite.com/2015/07/31/view-markdown-file-in-terminal/"/>
-    <id>http://yoursite.com/2015/07/31/view-markdown-file-in-terminal/</id>
+    <link href="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/"/>
+    <id>http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/</id>
     <published>2015-07-31T06:14:09.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>NPM으로 노드 모듈을 설치하다가 설치된 노드 모듈에 있는 마크다운 문서를 봐야 하는 경우가 있는데 Github가서 찾아보긴 귀찮고 터미널에서 마크다운 문서를 preview로 바로 볼 수 있는 방법이 없을까 했는데, 안되는 건 없구나. ;Q</p>
 <p><a href="http://tosbourn.com/view-markdown-files-terminal/" target="_blank" rel="external">http://tosbourn.com/view-markdown-files-terminal/</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install pandoc</span><br><span class="line">brew install lynx</span><br></pre></td></tr></table></figure>
-<p>그리고 본인이 사용하는 쉘의 설정 파일에 아래 설정을 넣어 준다.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">rmd</span></span> () &#123;</span><br><span class="line">  pandoc <span class="variable">$1</span> | lynx -stdin</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install pandoc</span><br><span class="line">brew install lynx</span><br></pre></td></tr></table></figure>
+<p>그리고 본인이 사용하는 쉘의 설정 파일에 아래 설정을 넣어 준다.<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">rmd</span></span> () &#123;</span><br><span class="line">  pandoc <span class="variable">$1</span> | lynx -stdin</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>그리고 새로운 셸에 접속하거나, source(.)로 설정파일을 리로드 한다. 끝.</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmd ~/blah/immarkdown.md</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">rmd ~/blah/immarkdown.md</span><br></pre></td></tr></table></figure>
 <p>Pandoc으로 마크다운 문서를 html파일로 변환 뒤에 전설(적어도 나한테는)의 터미널 브라우져인 lynx를 통해서 열면 바로 볼 수 있는 것이다. </p>
 <p><img src="/images/lynx.png" alt="터미널에서 마크다운 문서 보기"><br>(이렇게 보니 vi로 열어서 보는 거랑 별 차이 없어 보이기는 하다…)</p>
 <p>다른 번에는 생활을 윤택하게 해주는 터미널 유틸리티를 소개해 봐야 겠다. </p>
@@ -220,30 +220,30 @@
     <![CDATA[<p>NPM으로 노드 모듈을 설치하다가 설치된 노드 모듈에 있는 마크다운 문서를 봐야 하는 경우가 있는데 Github가서 찾아보긴 귀찮고 터미널에서 마크다운 문서를 preview로 바로 볼 수 있는 방법이 없을까 했는데, 안되는 건 없구나. ;Q</p]]>
     </summary>
     
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+      <category term="markdown" scheme="http://jaydee88.github.io/tags/markdown/"/>
     
-      <category term="terminal" scheme="http://yoursite.com/tags/terminal/"/>
+      <category term="terminal" scheme="http://jaydee88.github.io/tags/terminal/"/>
     
-      <category term="tip" scheme="http://yoursite.com/tags/tip/"/>
+      <category term="tip" scheme="http://jaydee88.github.io/tags/tip/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Sails'js 사용자 로그인 기능 구현 - 1편]]></title>
-    <link href="http://yoursite.com/2015/07/29/User-authentication-with-Sails-js/"/>
-    <id>http://yoursite.com/2015/07/29/User-authentication-with-Sails-js/</id>
+    <link href="http://jaydee88.github.io/2015/07/29/User-authentication-with-Sails-js/"/>
+    <id>http://jaydee88.github.io/2015/07/29/User-authentication-with-Sails-js/</id>
     <published>2015-07-29T09:04:59.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>웹에서 구동하는 sails 프로젝트 예제입니다. 내용이 길어질 거 같아 여러번의 포스팅으로 나눠서 올릴 예정입니다. 저 같이 처음 sails접하시는 분들에게 도움이 되었으면 좋겠습니다. </p>
 <h2 id="Sails’js_프로젝트_생성">Sails’js 프로젝트 생성</h2><p>프로젝트명을 kails(k+sails)라 했다. 딱히 생각나는 이름이 없었다. ;(</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sails new kails</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sails new kails</span><br></pre></td></tr></table></figure>
 <p>완료 메시지가 뜨고 <code>kails</code>라는 디렉토리가 생성되었다. 디렉토리 구조를 보면 아래와 같다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% tree -d -L 2&#10;.&#10;&#9500;&#9472;&#9472; api&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; controllers&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; models&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; policies&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; responses&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; services&#10;&#9500;&#9472;&#9472; assets&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; images&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; js&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; styles&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; templates&#10;&#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; env&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; locales&#10;&#9500;&#9472;&#9472; node_modules&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; ejs -&#62; /usr/local/lib/node_modules/sails/node_modules/ejs&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-clean -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-clean&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-coffee -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-coffee&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-concat -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-concat&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-copy -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-copy&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-cssmin -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-cssmin&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-jst -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-jst&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-less -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-less&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-uglify -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-uglify&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-watch -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-watch&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sails-linker -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sails-linker&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sync -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sync&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; include-all -&#62; /usr/local/lib/node_modules/sails/node_modules/include-all&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; rc -&#62; /usr/local/lib/node_modules/sails/node_modules/rc&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; sails -&#62; /usr/local/lib/node_modules/sails&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; sails-disk -&#62; /usr/local/lib/node_modules/sails/node_modules/sails-disk&#10;&#9500;&#9472;&#9472; tasks&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; register&#10;&#9492;&#9472;&#9472; views&#10;&#10;36 directories</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% tree -d -L 2&#10;.&#10;&#9500;&#9472;&#9472; api&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; controllers&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; models&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; policies&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; responses&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; services&#10;&#9500;&#9472;&#9472; assets&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; images&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; js&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; styles&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; templates&#10;&#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; env&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; locales&#10;&#9500;&#9472;&#9472; node_modules&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; ejs -&#62; /usr/local/lib/node_modules/sails/node_modules/ejs&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-clean -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-clean&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-coffee -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-coffee&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-concat -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-concat&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-copy -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-copy&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-cssmin -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-cssmin&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-jst -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-jst&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-less -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-less&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-uglify -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-uglify&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-watch -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-watch&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sails-linker -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sails-linker&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sync -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sync&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; include-all -&#62; /usr/local/lib/node_modules/sails/node_modules/include-all&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; rc -&#62; /usr/local/lib/node_modules/sails/node_modules/rc&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; sails -&#62; /usr/local/lib/node_modules/sails&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; sails-disk -&#62; /usr/local/lib/node_modules/sails/node_modules/sails-disk&#10;&#9500;&#9472;&#9472; tasks&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; register&#10;&#9492;&#9472;&#9472; views&#10;&#10;36 directories</span><br></pre></td></tr></table></figure>
 <p>크게 프로젝트 설정 파일들이 모여 있는 <code>config</code>, 실제 비지니스/모델/라우팅 부분인 <code>api</code>, 프로젝트의 스태틱 리소스가 위치하는 <code>assets</code>, 그리고 화면 뷰 영역 파일(Sails.js에서는 <a href="http://www.embeddedjs.com/" target="_blank" rel="external">EJS</a>를 기본 포맷으로 사용 한다.)이 위치하는 <code>views</code>가 있다. </p>
 <p>데이터베이스 연결이 준비되지 않았을 경우에도 기본으로 <code>sails-disk</code>라는 데이터베이스 어댑터를 이용해서 자체 제공하는 파일 기반 데이터베이스를 사용할 수 있다. <code>config/connections.js</code>파일을 열어보면 어댑터를 설정할 수 있고 개발/운영 모드에 따라서 별 개의 데이터베이스를 설정할 수 있다. <strong>그리고 sails-disk(local disk storage)는 개발모드에서만 사용해야 한다.</strong> 실제 서비스용으로 사용하기에는 무리가 크다. </p>
-<p><code>config/models.js</code> 아래 2라인을 찾아서 주석을 해제 한다.<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">connection:</span> <span class="string">'localDiskDb'</span>,</span><br><span class="line"><span class="string">migrate:</span> <span class="string">'alter'</span></span><br></pre></td></tr></table></figure></p>
+<p><code>config/models.js</code> 아래 2라인을 찾아서 주석을 해제 한다.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">connection: &#39;localDiskDb&#39;,&#10;migrate: &#39;alter&#39;</span><br></pre></td></tr></table></figure></p>
 <p>sails 프로젝트를 기동할 시에 데이터베이스 migration 되는데 migrate옵션은 총 3가지다.</p>
 <ul>
 <li>safe : 마이그레이션 하지 않음. 사용자가 직접 데이터베이스를 수정해야 한다.</li>
@@ -251,17 +251,17 @@
 <li>drop : 스키마/데이터 모두 삭제하고 다시 생성. </li>
 </ul>
 <p>sails프로젝트를 운영모두로 기동할 경우에는 safe만 가능 하고 개발모드에서 3가지 모두 사용할 수 있다. </p>
-<p><code>env/development.js</code>에서 연결 정보를 local disk storage로 설정 한다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  models: &#123;</span><br><span class="line">    connection: <span class="string">'localDiskDb'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p><code>env/development.js</code>에서 연결 정보를 local disk storage로 설정 한다.<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  models: &#123;</span><br><span class="line">    connection: <span class="string">'localDiskDb'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>이젠 프로젝트를 기동해 보자.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% sails lift</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% sails lift</span><br></pre></td></tr></table></figure>
 <p>터미널 로그에 돛단배가 보이고 <a href="http://localhost:1337" target="_blank" rel="external">http://localhost:1337</a> 로 접속해서 안내 페이지가 뜨면 정상적으로 <code>sails</code>를 <code>lift</code>한 것이다. </p>
-<h2 id="사용자(User)_모델_추가">사용자(User) 모델 추가</h2><p>로그인 행위를 할 사용자에 대한 모델을 추가해보자.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sails generate api user</span><br></pre></td></tr></table></figure></p>
+<h2 id="사용자(User)_모델_추가">사용자(User) 모델 추가</h2><p>로그인 행위를 할 사용자에 대한 모델을 추가해보자.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sails generate api user</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><code>api/controllers/UserController.js</code></li>
 <li><code>api/models/User.js</code></li>
 </ul>
 <p>2개의 파일을 추가 되었다. 사용자(User)모델이 로그인을 하기 위해 필요한 속성인 email주소와 password를 추가해 보자. </p>
-<p><code>User.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  attributes: &#123;</span><br><span class="line">      email : &#123;</span><br><span class="line">          type : <span class="string">'email'</span>,</span><br><span class="line">          requird : <span class="literal">true</span>,</span><br><span class="line">          unique : <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      passowrd : &#123;</span><br><span class="line">           type : <span class="string">'string'</span>,</span><br><span class="line">           required : <span class="literal">true</span>,</span><br><span class="line">           minLength : <span class="number">6</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p><code>User.js</code><br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  attributes: &#123;</span><br><span class="line">      email : &#123;</span><br><span class="line">          type : <span class="string">'email'</span>,</span><br><span class="line">          requird : <span class="literal">true</span>,</span><br><span class="line">          unique : <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      passowrd : &#123;</span><br><span class="line">           type : <span class="string">'string'</span>,</span><br><span class="line">           required : <span class="literal">true</span>,</span><br><span class="line">           minLength : <span class="number">6</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>수정 후에 sails를 기동할 시에 migrate작업이 수행되면서 실제 되면서 mysql의 경우에는 실제 테이블이 생성 된다. </p>
 <h2 id="부트스트랩_테마_화면_구성">부트스트랩 테마 화면 구성</h2><p>sails에서 프론트엔드로 사용될 웹페이지(화면)을 구성해 볼려고 한다. 퍼블리싱을 못하는 이유로 쉽게 카피해서 사용할 수 있는 <code>Bootstrap</code> 기반의 <a href="https://bootswatch.com/simplex/" target="_blank" rel="external">Bootswatch의 Simplex테마를</a> 사용하기로 했다.</p>
 <hr>
@@ -272,20 +272,20 @@
 <h2 id="Sails’js_프로젝트_생성">Sa]]>
     </summary>
     
-      <category term="login" scheme="http://yoursite.com/tags/login/"/>
+      <category term="login" scheme="http://jaydee88.github.io/tags/login/"/>
     
-      <category term="passport.js" scheme="http://yoursite.com/tags/passport-js/"/>
+      <category term="passport.js" scheme="http://jaydee88.github.io/tags/passport-js/"/>
     
-      <category term="sails.js" scheme="http://yoursite.com/tags/sails-js/"/>
+      <category term="sails.js" scheme="http://jaydee88.github.io/tags/sails-js/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Sails'js 소개 및 시작하기]]></title>
-    <link href="http://yoursite.com/2015/07/28/getting-started-with-sailsjs/"/>
-    <id>http://yoursite.com/2015/07/28/getting-started-with-sailsjs/</id>
+    <link href="http://jaydee88.github.io/2015/07/28/getting-started-with-sailsjs/"/>
+    <id>http://jaydee88.github.io/2015/07/28/getting-started-with-sailsjs/</id>
     <published>2015-07-28T08:42:36.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 <code>node.js</code>기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 <code>0.11.0</code>이고 구글링 한국어로는 페이지가 몇 안 나오는 걸로 보아 인기가 얻거나 나온지 얼마 안됬구나 했는데 Git 히스토리를 보니 대략 2012년부터 해온 프로젝트다. </p>
@@ -298,7 +298,7 @@
 </ul>
 <p>당근 자바스크립트 언어 구성이고, 내부적으로 Waterline이라는 ORM 플러그인을 내장하고 있어서 기존 Mysql과 같은 SQL기반 데이터베이스뿐만 아니라 MongoDB같은 noSQL 데이터베이스도 사용이 가능하고 모델을 통한 쿼리도 가능하다. 모바일 앱이나 게임에서 필요한 REST API 바로 생성할 수 있는 기능은 프로토타입핑하기엔 편리하다. 웹소켓 기능도 기본으로 들어가 있는데 아직까진 사용해본 적이 없어서 모르겠고 위 2가지 사항만으로도 충분한 강점이 있어 보인다. </p>
 <p>설치는 <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>으로 간편 설치.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -g install sails</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm -g install sails</span><br></pre></td></tr></table></figure>
 <p>npm을 사용하기 이전에 시스템에 node가 설치되어 있어야 한다. </p>
 <p>다음 포스트에서 간단하게 로그인 기능을 구현하는 방법을 올려 보겠다. </p>
 <p>sails’s 관련 링크 </p>
@@ -311,22 +311,22 @@
     <![CDATA[<p>최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 <code>node]]>
     </summary>
     
-      <category term="fullstack framework" scheme="http://yoursite.com/tags/fullstack-framework/"/>
+      <category term="fullstack framework" scheme="http://jaydee88.github.io/tags/fullstack-framework/"/>
     
-      <category term="getting started" scheme="http://yoursite.com/tags/getting-started/"/>
+      <category term="getting started" scheme="http://jaydee88.github.io/tags/getting-started/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="javascript" scheme="http://jaydee88.github.io/tags/javascript/"/>
     
-      <category term="sails.js" scheme="http://yoursite.com/tags/sails-js/"/>
+      <category term="sails.js" scheme="http://jaydee88.github.io/tags/sails-js/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[부산 스타트업 카페 개소 소식]]></title>
-    <link href="http://yoursite.com/2015/07/27/Busan-Startup-Cafe/"/>
-    <id>http://yoursite.com/2015/07/27/Busan-Startup-Cafe/</id>
+    <link href="http://jaydee88.github.io/2015/07/27/Busan-Startup-Cafe/"/>
+    <id>http://jaydee88.github.io/2015/07/27/Busan-Startup-Cafe/</id>
     <published>2015-07-27T14:32:07.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>올초에 부산에서 스타트업을 시도하면서(결국 시도만 해보고 실패함) 부산에서 스타트업 관련 인프라가 너무 힘들다는 사실을 깨달았다. 그런 고민으로 스타트업 부산이라는 주제로 블로그와 페이지를 열고 오프라인 네트워킹 모임을 개최할려고 시도 했었는데 귀차니즘..이 아니라 쉽게 포기하는 내 성격 때문에 중도 포기하고 말았다. 그렇게 몇 달이 흘렀고 얼마전에 구글 뉴스를 통해서 아래 기사를 접했다. </p>
@@ -348,18 +348,18 @@
     <![CDATA[<p>올초에 부산에서 스타트업을 시도하면서(결국 시도만 해보고 실패함) 부산에서 스타트업 관련 인프라가 너무 힘들다는 사실을 깨달았다. 그런 고민으로 스타트업 부산이라는 주제로 블로그와 페이지를 열고 오프라인 네트워킹 모임을 개최할려고 시도 했었는데 ]]>
     </summary>
     
-      <category term="busan" scheme="http://yoursite.com/tags/busan/"/>
+      <category term="busan" scheme="http://jaydee88.github.io/tags/busan/"/>
     
-      <category term="startup news" scheme="http://yoursite.com/tags/startup-news/"/>
+      <category term="startup news" scheme="http://jaydee88.github.io/tags/startup-news/"/>
     
-      <category term="Startup" scheme="http://yoursite.com/categories/Startup/"/>
+      <category term="Startup" scheme="http://jaydee88.github.io/categories/Startup/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[vim 사용자를 위한 종합 패키지 spf13 Distribution]]></title>
-    <link href="http://yoursite.com/2015/07/27/spf13-vim-Distribution/"/>
-    <id>http://yoursite.com/2015/07/27/spf13-vim-Distribution/</id>
+    <link href="http://jaydee88.github.io/2015/07/27/spf13-vim-Distribution/"/>
+    <id>http://jaydee88.github.io/2015/07/27/spf13-vim-Distribution/</id>
     <published>2015-07-27T11:39:54.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>개발 일을 처음 시작할 때 vi(m)을 처음 배웠는데 배운 이유가 간단 했다. 멋있어 보여서다. 검은 터미널 화면에서 vi(m)에디터 하나로 자동완성, 문법체킹 이런 거 하나 없이 한땀한땀 코드를 입력하는 게 멋있어 보여서 배우기 시작 했다. 그야말로 겉멋 개발자였던 셈이다. </p>
@@ -368,12 +368,12 @@
 <p>최근에는 <a href="https://www.sublimetext.com/" target="_blank" rel="external">sublime</a>으로 잘 써먹었고, 깃헙에서 나온 <a href="https://atom.io/" target="_blank" rel="external">Atom</a>에디터도 이쁘긴 한데 몇 메가짜리 로그 파일 열어보다가 느려지는 거 보곤 기겁해서 삭제해 버렸다. </p>
 <p>그러다가 요즘 <a href="http://livecoding.tv/" target="_blank" rel="external">라이브코딩 티비를</a> 보다 vi(m)으로 코딩하는 모습을 보면서 다시 vi(m)을 보다 보니 이런게 있어서 소개 해드릴려고 한다.</p>
 <p><a href="http://vim.spf13.com/" target="_blank" rel="external">spf13-vim - The Ultimate Vim Distribution</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://j.mp/spf13-vim3 -L -o - | sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl http://j.mp/spf13-vim3 -L -o - | sh</span><br></pre></td></tr></table></figure>
 <p>맥에서는 터미널에서 위 명령어만으로 수많은 bundle들이 설치 된다.</p>
 <p>게중에 <code>NERDTree</code>(토글 키는 <code>&lt;C-E&gt;</code>로 기본 바인딩되어 있다.)야 워낙에 유명하고, <code>ctrlp.vim</code>은 파일 명으로 바로 파일을 찾아서 열어주는 플러그인. 다른 에디터(sublime, atom)에는 기본 기능인데 vi(m)에도 되니깐 감동이다. ㅠ.ㅠ</p>
 <p><img src="/images/ctrlp.gif" alt="강려크한 ctrlp.vim"></p>
 <p>그밖에도 git관련 플러그인도 있고 이 정도면 sublime이나 atom 안 부럽다.<br>.vim디렉토리에 설치된 플러그인을 리스팅해보면 아래와 같이 많다… 아마 저게 어떤 플러그인인지는 몇 년이 지난 후에나 알 수 있지 않을 까 싶다.(이렇게 많은 플러그인 때문인지 vim 구동이 좀 무겁게 느껴진다.)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vundle&#10;vim-addon-mw-utils&#10;tlib_vim&#10;nerdtree&#10;vim-colors-solarized&#10;vim-colors&#10;vim-surround&#10;vim-repeat&#10;auto-pairs&#10;ctrlp.vim&#10;ctrlp-funky&#10;vim-multiple-cursors&#10;sessionman.vim&#10;matchit.zip&#10;vim-airline&#10;vim-bufferline&#10;vim-easymotion&#10;vim-nerdtree-tabs&#10;vim-colorschemes&#10;undotree&#10;vim-indent-guides&#10;restore_view.vim&#10;vim-signify&#10;vim-abolish&#10;vim-over&#10;vim-textobj-user&#10;vim-textobj-indent&#10;wildfire.vim&#10;vim-litecorrect&#10;vim-textobj-sentence&#10;vim-textobj-quote&#10;vim-wordy&#10;syntastic&#10;vim-fugitive&#10;webapi-vim&#10;gist-vim&#10;nerdcommenter&#10;vim-commentary&#10;tabular&#10;tagbar&#10;neocomplete.vim&#10;neosnippet&#10;neosnippet-snippets&#10;vim-snippets&#10;PIV&#10;vim-php-namespace&#10;vim-twig&#10;python-mode&#10;python.vim&#10;python_match.vim&#10;pythoncomplete&#10;vim-json&#10;vim-less&#10;vim-javascript&#10;vim-jst&#10;vim-coffee-script&#10;HTML-AutoCloseTag&#10;vim-css3-syntax&#10;vim-coloresque&#10;vim-haml&#10;vim-rails&#10;rust.vim&#10;vim-markdown&#10;vim-preview&#10;vim-cucumber&#10;vim-toml&#10;vim-cucumber-align-pipes&#10;salt-vim</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vundle&#10;vim-addon-mw-utils&#10;tlib_vim&#10;nerdtree&#10;vim-colors-solarized&#10;vim-colors&#10;vim-surround&#10;vim-repeat&#10;auto-pairs&#10;ctrlp.vim&#10;ctrlp-funky&#10;vim-multiple-cursors&#10;sessionman.vim&#10;matchit.zip&#10;vim-airline&#10;vim-bufferline&#10;vim-easymotion&#10;vim-nerdtree-tabs&#10;vim-colorschemes&#10;undotree&#10;vim-indent-guides&#10;restore_view.vim&#10;vim-signify&#10;vim-abolish&#10;vim-over&#10;vim-textobj-user&#10;vim-textobj-indent&#10;wildfire.vim&#10;vim-litecorrect&#10;vim-textobj-sentence&#10;vim-textobj-quote&#10;vim-wordy&#10;syntastic&#10;vim-fugitive&#10;webapi-vim&#10;gist-vim&#10;nerdcommenter&#10;vim-commentary&#10;tabular&#10;tagbar&#10;neocomplete.vim&#10;neosnippet&#10;neosnippet-snippets&#10;vim-snippets&#10;PIV&#10;vim-php-namespace&#10;vim-twig&#10;python-mode&#10;python.vim&#10;python_match.vim&#10;pythoncomplete&#10;vim-json&#10;vim-less&#10;vim-javascript&#10;vim-jst&#10;vim-coffee-script&#10;HTML-AutoCloseTag&#10;vim-css3-syntax&#10;vim-coloresque&#10;vim-haml&#10;vim-rails&#10;rust.vim&#10;vim-markdown&#10;vim-preview&#10;vim-cucumber&#10;vim-toml&#10;vim-cucumber-align-pipes&#10;salt-vim</span><br></pre></td></tr></table></figure>
 <p>아무튼 저같이 vi(m)을 사랑하지만 귀찮음에 한동안 vi(m)을 멀리 했던 동지(?)들이여 이 패키지로 다시 돌아오길 바란다. vi(m) 여전히 훌륭하고 멋진 에디터이다. </p>
 <p>덧.<br>맥에서 vi(m)을 사용하다 보면 입력 모드에서 커맨드 모드(esc)로 변경할 때 한글 입력기로 되어 있으면 은근 스트레쓰 받는데 구글링해보니 <a href="https://github.com/gureum/gureum" target="_blank" rel="external">구름 입력기</a> 설정에서  esc키 입력시에 로마자 자동변환 옵션이 있단다. 맥에서 vi(m)사용자라면 필히 설치 하자. </p>
 ]]></content>
@@ -381,20 +381,20 @@
     <![CDATA[<p>개발 일을 처음 시작할 때 vi(m)을 처음 배웠는데 배운 이유가 간단 했다. 멋있어 보여서다. 검은 터미널 화면에서 vi(m)에디터 하나로 자동완성, 문법체킹 이런 거 하나 없이 한땀한땀 코드를 입력하는 게 멋있어 보여서 배우기 시작 했다. 그]]>
     </summary>
     
-      <category term="editor" scheme="http://yoursite.com/tags/editor/"/>
+      <category term="editor" scheme="http://jaydee88.github.io/tags/editor/"/>
     
-      <category term="spf13" scheme="http://yoursite.com/tags/spf13/"/>
+      <category term="spf13" scheme="http://jaydee88.github.io/tags/spf13/"/>
     
-      <category term="vim" scheme="http://yoursite.com/tags/vim/"/>
+      <category term="vim" scheme="http://jaydee88.github.io/tags/vim/"/>
     
-      <category term="Coding" scheme="http://yoursite.com/categories/Coding/"/>
+      <category term="Coding" scheme="http://jaydee88.github.io/categories/Coding/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[ESENS Nu shit]]></title>
-    <link href="http://yoursite.com/2015/07/26/ESENS-Nu-shit/"/>
-    <id>http://yoursite.com/2015/07/26/ESENS-Nu-shit/</id>
+    <link href="http://jaydee88.github.io/2015/07/26/ESENS-Nu-shit/"/>
+    <id>http://jaydee88.github.io/2015/07/26/ESENS-Nu-shit/</id>
     <published>2015-07-26T06:29:50.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>어제 저녁에 올라왔는데 가사 주긴다. 국내에서 이런 류로 독보적(?)이다.</p>
@@ -407,18 +407,18 @@
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud]]>
     </summary>
     
-      <category term="ESENS" scheme="http://yoursite.com/tags/ESENS/"/>
+      <category term="ESENS" scheme="http://jaydee88.github.io/tags/ESENS/"/>
     
-      <category term="soundcloud" scheme="http://yoursite.com/tags/soundcloud/"/>
+      <category term="soundcloud" scheme="http://jaydee88.github.io/tags/soundcloud/"/>
     
-      <category term="Life" scheme="http://yoursite.com/categories/Life/"/>
+      <category term="Life" scheme="http://jaydee88.github.io/categories/Life/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[여기는 또 다른 블로그]]></title>
-    <link href="http://yoursite.com/2015/07/26/another-blog/"/>
-    <id>http://yoursite.com/2015/07/26/another-blog/</id>
+    <link href="http://jaydee88.github.io/2015/07/26/another-blog/"/>
+    <id>http://jaydee88.github.io/2015/07/26/another-blog/</id>
     <published>2015-07-26T00:00:00.000Z</published>
     <updated>2015-09-21T07:17:23.000Z</updated>
     <content type="html"><![CDATA[<p>요즘에 할 이야기들이 많아져서 어딘가에는 정리할 곳이 필요하다는 생각이 들어서 그 어딘가가 블로그로 해야겠다는 생각이 들어서 웹 검색을 통해 내가 쓸만한 블로그 엔진을 찾아보았다. 3가지 종류로 나눠지는 듯 하다.</p>
@@ -430,7 +430,7 @@
 <p>3번의 경우 서버 사이드 프로그램(php)이 필요 없다. 로컬 PC에서 정적 파일들(html, css 등)을 생성해서 정적 파일들을 서빙할 수 있는 서버에 올려주면 끝이다. 결국 node.js기반 정적 사이트 변환기인 hexo을 선택했고, 호스팅은 GitHub 페이지를 이용하기로 했다. 블로그 데이터 = 내가 쓴 글들을 GitHub 페이지에 올리면서 당연히 Git저장소에 버전 관리까지 되므로 사실 서버&amp;백업이 신경 쓸 부분이 없다.<br>몇 년전에 구입하고 묵혀 두었던 마크다운 에디터인 ByWord를 통해서 글 쓰고 GitHub에 올리기만 하면 되니 편하다는 생각이 든다. 그리고 마크다운 확장인 <a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank" rel="external">gfm</a>도 지원하니 소스 출력용으로 딱이다.</p>
 <hr>
 <p>추가 글.</p>
-<p>오늘 회사 랩탑으로 보다가 한가지 착각한 게 있었다.<br>github페이지(저장소)에 올라가는 파일들은 전부 웹에 퍼블리싱되는 파일들 뿐이다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy(또는 그냥 d)</span><br></pre></td></tr></table></figure></p>
+<p>오늘 회사 랩탑으로 보다가 한가지 착각한 게 있었다.<br>github페이지(저장소)에 올라가는 파일들은 전부 웹에 퍼블리싱되는 파일들 뿐이다.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy(또는 그냥 d)</span><br></pre></td></tr></table></figure></p>
 <p>할 경우에 내가 작성한 마크다운 글이라던지, 설정파일들은 <code>Github</code>에 올라가지 않는다. 당연한 건데 순간 착각 했다. 그래서 <code>Github</code>에 따로 글 관리용 리파지터리를 생성해도 되고 나같이 부끄럼이 많다면 <a href="http://bitbucket.com/" target="_blank" rel="external">bitbucket</a>에 private 리파지터리에 올려서 보관하면 좋다.  </p>
 <p>생각해보니 역시나 허술한 블로그였다는 생각이 든다..</p>
 ]]></content>
@@ -440,13 +440,13 @@
 <li>서비스형]]>
     </summary>
     
-      <category term="Centum Park" scheme="http://yoursite.com/tags/Centum-Park/"/>
+      <category term="Centum Park" scheme="http://jaydee88.github.io/tags/Centum-Park/"/>
     
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+      <category term="blog" scheme="http://jaydee88.github.io/tags/blog/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://jaydee88.github.io/tags/hexo/"/>
     
-      <category term="Life" scheme="http://yoursite.com/categories/Life/"/>
+      <category term="Life" scheme="http://jaydee88.github.io/categories/Life/"/>
     
   </entry>
   

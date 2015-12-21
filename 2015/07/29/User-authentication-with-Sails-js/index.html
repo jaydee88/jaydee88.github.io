@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sails&#39;js 사용자 로그인 기능 구현 - 1편 | Hexo</title>
+  <title>Sails&#39;js 사용자 로그인 기능 구현 - 1편 | 센텀 박의 허술한 블로그</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="웹에서 구동하는 sails 프로젝트 예제입니다. 내용이 길어질 거 같아 여러번의 포스팅으로 나눠서 올릴 예정입니다. 저 같이 처음 sails접하시는 분들에게 도움이 되었으면 좋겠습니다. 
 Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱히 생각나는 이름이 없었다. ;(
-1sails new kails
-완료 메시지가 뜨고 kail">
+sails new kails
+완료 메시지가 뜨고 kails">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sails'js 사용자 로그인 기능 구현 - 1편">
-<meta property="og:url" content="http://yoursite.com/2015/07/29/User-authentication-with-Sails-js/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://jaydee88.github.io/2015/07/29/User-authentication-with-Sails-js/index.html">
+<meta property="og:site_name" content="센텀 박의 허술한 블로그">
 <meta property="og:description" content="웹에서 구동하는 sails 프로젝트 예제입니다. 내용이 길어질 거 같아 여러번의 포스팅으로 나눠서 올릴 예정입니다. 저 같이 처음 sails접하시는 분들에게 도움이 되었으면 좋겠습니다. 
 Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱히 생각나는 이름이 없었다. ;(
-1sails new kails
-완료 메시지가 뜨고 kail">
+sails new kails
+완료 메시지가 뜨고 kails">
 <meta property="og:updated_time" content="2015-09-21T07:17:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sails'js 사용자 로그인 기능 구현 - 1편">
 <meta name="twitter:description" content="웹에서 구동하는 sails 프로젝트 예제입니다. 내용이 길어질 거 같아 여러번의 포스팅으로 나눠서 올릴 예정입니다. 저 같이 처음 sails접하시는 분들에게 도움이 되었으면 좋겠습니다. 
 Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱히 생각나는 이름이 없었다. ;(
-1sails new kails
-완료 메시지가 뜨고 kail">
+sails new kails
+완료 메시지가 뜨고 kails">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="센텀 박의 허술한 블로그" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,8 +43,12 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">센텀 박의 허술한 블로그</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">console.blog(&quot;Centum Park&#39;s Hustle &amp; Flow&quot;)</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -63,7 +67,7 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jaydee88.github.io"></form>
       </div>
     </div>
   </div>
@@ -97,12 +101,12 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
       
         <p>웹에서 구동하는 sails 프로젝트 예제입니다. 내용이 길어질 거 같아 여러번의 포스팅으로 나눠서 올릴 예정입니다. 저 같이 처음 sails접하시는 분들에게 도움이 되었으면 좋겠습니다. </p>
 <h2 id="Sails’js_프로젝트_생성">Sails’js 프로젝트 생성</h2><p>프로젝트명을 kails(k+sails)라 했다. 딱히 생각나는 이름이 없었다. ;(</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sails new kails</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sails new kails</span><br></pre></td></tr></table></figure>
 <p>완료 메시지가 뜨고 <code>kails</code>라는 디렉토리가 생성되었다. 디렉토리 구조를 보면 아래와 같다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% tree -d -L 2&#10;.&#10;&#9500;&#9472;&#9472; api&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; controllers&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; models&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; policies&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; responses&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; services&#10;&#9500;&#9472;&#9472; assets&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; images&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; js&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; styles&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; templates&#10;&#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; env&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; locales&#10;&#9500;&#9472;&#9472; node_modules&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; ejs -&#62; /usr/local/lib/node_modules/sails/node_modules/ejs&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-clean -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-clean&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-coffee -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-coffee&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-concat -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-concat&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-copy -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-copy&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-cssmin -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-cssmin&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-jst -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-jst&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-less -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-less&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-uglify -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-uglify&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-watch -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-watch&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sails-linker -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sails-linker&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sync -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sync&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; include-all -&#62; /usr/local/lib/node_modules/sails/node_modules/include-all&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; rc -&#62; /usr/local/lib/node_modules/sails/node_modules/rc&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; sails -&#62; /usr/local/lib/node_modules/sails&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; sails-disk -&#62; /usr/local/lib/node_modules/sails/node_modules/sails-disk&#10;&#9500;&#9472;&#9472; tasks&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; register&#10;&#9492;&#9472;&#9472; views&#10;&#10;36 directories</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% tree -d -L 2&#10;.&#10;&#9500;&#9472;&#9472; api&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; controllers&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; models&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; policies&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; responses&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; services&#10;&#9500;&#9472;&#9472; assets&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; images&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; js&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; styles&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; templates&#10;&#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; env&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; locales&#10;&#9500;&#9472;&#9472; node_modules&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; ejs -&#62; /usr/local/lib/node_modules/sails/node_modules/ejs&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-clean -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-clean&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-coffee -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-coffee&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-concat -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-concat&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-copy -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-copy&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-cssmin -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-cssmin&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-jst -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-jst&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-less -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-less&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-uglify -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-uglify&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-contrib-watch -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-contrib-watch&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sails-linker -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sails-linker&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; grunt-sync -&#62; /usr/local/lib/node_modules/sails/node_modules/grunt-sync&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; include-all -&#62; /usr/local/lib/node_modules/sails/node_modules/include-all&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; rc -&#62; /usr/local/lib/node_modules/sails/node_modules/rc&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; sails -&#62; /usr/local/lib/node_modules/sails&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; sails-disk -&#62; /usr/local/lib/node_modules/sails/node_modules/sails-disk&#10;&#9500;&#9472;&#9472; tasks&#10;&#9474;&#160;&#160; &#9500;&#9472;&#9472; config&#10;&#9474;&#160;&#160; &#9492;&#9472;&#9472; register&#10;&#9492;&#9472;&#9472; views&#10;&#10;36 directories</span><br></pre></td></tr></table></figure>
 <p>크게 프로젝트 설정 파일들이 모여 있는 <code>config</code>, 실제 비지니스/모델/라우팅 부분인 <code>api</code>, 프로젝트의 스태틱 리소스가 위치하는 <code>assets</code>, 그리고 화면 뷰 영역 파일(Sails.js에서는 <a href="http://www.embeddedjs.com/" target="_blank" rel="external">EJS</a>를 기본 포맷으로 사용 한다.)이 위치하는 <code>views</code>가 있다. </p>
 <p>데이터베이스 연결이 준비되지 않았을 경우에도 기본으로 <code>sails-disk</code>라는 데이터베이스 어댑터를 이용해서 자체 제공하는 파일 기반 데이터베이스를 사용할 수 있다. <code>config/connections.js</code>파일을 열어보면 어댑터를 설정할 수 있고 개발/운영 모드에 따라서 별 개의 데이터베이스를 설정할 수 있다. <strong>그리고 sails-disk(local disk storage)는 개발모드에서만 사용해야 한다.</strong> 실제 서비스용으로 사용하기에는 무리가 크다. </p>
-<p><code>config/models.js</code> 아래 2라인을 찾아서 주석을 해제 한다.<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">connection:</span> <span class="string">'localDiskDb'</span>,</span><br><span class="line"><span class="string">migrate:</span> <span class="string">'alter'</span></span><br></pre></td></tr></table></figure></p>
+<p><code>config/models.js</code> 아래 2라인을 찾아서 주석을 해제 한다.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">connection: &#39;localDiskDb&#39;,&#10;migrate: &#39;alter&#39;</span><br></pre></td></tr></table></figure></p>
 <p>sails 프로젝트를 기동할 시에 데이터베이스 migration 되는데 migrate옵션은 총 3가지다.</p>
 <ul>
 <li>safe : 마이그레이션 하지 않음. 사용자가 직접 데이터베이스를 수정해야 한다.</li>
@@ -110,17 +114,17 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
 <li>drop : 스키마/데이터 모두 삭제하고 다시 생성. </li>
 </ul>
 <p>sails프로젝트를 운영모두로 기동할 경우에는 safe만 가능 하고 개발모드에서 3가지 모두 사용할 수 있다. </p>
-<p><code>env/development.js</code>에서 연결 정보를 local disk storage로 설정 한다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  models: &#123;</span><br><span class="line">    connection: <span class="string">'localDiskDb'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p><code>env/development.js</code>에서 연결 정보를 local disk storage로 설정 한다.<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  models: &#123;</span><br><span class="line">    connection: <span class="string">'localDiskDb'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>이젠 프로젝트를 기동해 보자.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% sails lift</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">centumpark-MacBook-Pro:kails:% sails lift</span><br></pre></td></tr></table></figure>
 <p>터미널 로그에 돛단배가 보이고 <a href="http://localhost:1337" target="_blank" rel="external">http://localhost:1337</a> 로 접속해서 안내 페이지가 뜨면 정상적으로 <code>sails</code>를 <code>lift</code>한 것이다. </p>
-<h2 id="사용자(User)_모델_추가">사용자(User) 모델 추가</h2><p>로그인 행위를 할 사용자에 대한 모델을 추가해보자.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sails generate api user</span><br></pre></td></tr></table></figure></p>
+<h2 id="사용자(User)_모델_추가">사용자(User) 모델 추가</h2><p>로그인 행위를 할 사용자에 대한 모델을 추가해보자.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sails generate api user</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><code>api/controllers/UserController.js</code></li>
 <li><code>api/models/User.js</code></li>
 </ul>
 <p>2개의 파일을 추가 되었다. 사용자(User)모델이 로그인을 하기 위해 필요한 속성인 email주소와 password를 추가해 보자. </p>
-<p><code>User.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  attributes: &#123;</span><br><span class="line">      email : &#123;</span><br><span class="line">          type : <span class="string">'email'</span>,</span><br><span class="line">          requird : <span class="literal">true</span>,</span><br><span class="line">          unique : <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      passowrd : &#123;</span><br><span class="line">           type : <span class="string">'string'</span>,</span><br><span class="line">           required : <span class="literal">true</span>,</span><br><span class="line">           minLength : <span class="number">6</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p><code>User.js</code><br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  attributes: &#123;</span><br><span class="line">      email : &#123;</span><br><span class="line">          type : <span class="string">'email'</span>,</span><br><span class="line">          requird : <span class="literal">true</span>,</span><br><span class="line">          unique : <span class="literal">true</span></span><br><span class="line">      &#125;,</span><br><span class="line">      passowrd : &#123;</span><br><span class="line">           type : <span class="string">'string'</span>,</span><br><span class="line">           required : <span class="literal">true</span>,</span><br><span class="line">           minLength : <span class="number">6</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>수정 후에 sails를 기동할 시에 migrate작업이 수행되면서 실제 되면서 mysql의 경우에는 실제 테이블이 생성 된다. </p>
 <h2 id="부트스트랩_테마_화면_구성">부트스트랩 테마 화면 구성</h2><p>sails에서 프론트엔드로 사용될 웹페이지(화면)을 구성해 볼려고 한다. 퍼블리싱을 못하는 이유로 쉽게 카피해서 사용할 수 있는 <code>Bootstrap</code> 기반의 <a href="https://bootswatch.com/simplex/" target="_blank" rel="external">Bootswatch의 Simplex테마를</a> 사용하기로 했다.</p>
 <hr>
@@ -129,7 +133,9 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/29/User-authentication-with-Sails-js/" data-id="ciifljdtj001ty0jcgvh787i9" class="article-share-link">Share</a>
+      <a data-url="http://jaydee88.github.io/2015/07/29/User-authentication-with-Sails-js/" data-id="ciifllrhm001trojc8aw59yo9" class="article-share-link">Share</a>
+      
+        <a href="http://jaydee88.github.io/2015/07/29/User-authentication-with-Sails-js/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/login/">login</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/passport-js/">passport.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sails-js/">sails.js</a></li></ul>
@@ -160,6 +166,12 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
   
 </article>
 
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -238,7 +250,7 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 John Doe<br>
+      &copy; 2015 Centum Park<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -252,6 +264,20 @@ Sails’js 프로젝트 생성프로젝트명을 kails(k+sails)라 했다. 딱�
   
 </nav>
     
+<script>
+  var disqus_shortname = 'jaydee88';
+  
+  var disqus_url = 'http://jaydee88.github.io/2015/07/29/User-authentication-with-Sails-js/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 

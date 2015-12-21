@@ -3,25 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>터미널에서 마크다운 문서 보기 | 센텀 박의 허술한 블로그</title>
+  <title>Category: Coding | 센텀 박의 허술한 블로그</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NPM으로 노드 모듈을 설치하다가 설치된 노드 모듈에 있는 마크다운 문서를 봐야 하는 경우가 있는데 Github가서 찾아보긴 귀찮고 터미널에서 마크다운 문서를 preview로 바로 볼 수 있는 방법이 없을까 했는데, 안되는 건 없구나. ;Q
-http://tosbourn.com/view-markdown-files-terminal/
-brew install pa">
-<meta property="og:type" content="article">
-<meta property="og:title" content="터미널에서 마크다운 문서 보기">
-<meta property="og:url" content="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/index.html">
+  <meta name="description" content="센텀 박의 부산IT, 소프트웨어, 스타트업, 개발, 음악이야기">
+<meta property="og:type" content="website">
+<meta property="og:title" content="센텀 박의 허술한 블로그">
+<meta property="og:url" content="http://jaydee88.github.io/categories/Coding/page/2/index.html">
 <meta property="og:site_name" content="센텀 박의 허술한 블로그">
-<meta property="og:description" content="NPM으로 노드 모듈을 설치하다가 설치된 노드 모듈에 있는 마크다운 문서를 봐야 하는 경우가 있는데 Github가서 찾아보긴 귀찮고 터미널에서 마크다운 문서를 preview로 바로 볼 수 있는 방법이 없을까 했는데, 안되는 건 없구나. ;Q
-http://tosbourn.com/view-markdown-files-terminal/
-brew install pa">
-<meta property="og:image" content="http://jaydee88.github.io/images/lynx.png">
-<meta property="og:updated_time" content="2015-09-21T07:17:23.000Z">
+<meta property="og:description" content="센텀 박의 부산IT, 소프트웨어, 스타트업, 개발, 음악이야기">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="터미널에서 마크다운 문서 보기">
-<meta name="twitter:description" content="NPM으로 노드 모듈을 설치하다가 설치된 노드 모듈에 있는 마크다운 문서를 봐야 하는 경우가 있는데 Github가서 찾아보긴 귀찮고 터미널에서 마크다운 문서를 preview로 바로 볼 수 있는 방법이 없을까 했는데, 안되는 건 없구나. ;Q
-http://tosbourn.com/view-markdown-files-terminal/
-brew install pa">
+<meta name="twitter:title" content="센텀 박의 허술한 블로그">
+<meta name="twitter:description" content="센텀 박의 부산IT, 소프트웨어, 스타트업, 개발, 음악이야기">
   
     <link rel="alternative" href="/atom.xml" title="센텀 박의 허술한 블로그" type="application/atom+xml">
   
@@ -71,84 +63,77 @@ brew install pa">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-view-markdown-file-in-terminal" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/31/view-markdown-file-in-terminal/" class="article-date">
-  <time datetime="2015-07-31T06:14:09.000Z" itemprop="datePublished">2015-07-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      터미널에서 마크다운 문서 보기
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2015/07/29/User-authentication-with-Sails-js/" class="archive-article-date">
+  <time datetime="2015-07-29T09:04:59.000Z" itemprop="datePublished">Jul 29</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/07/29/User-authentication-with-Sails-js/">Sails&#39;js 사용자 로그인 기능 구현 - 1편</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>NPM으로 노드 모듈을 설치하다가 설치된 노드 모듈에 있는 마크다운 문서를 봐야 하는 경우가 있는데 Github가서 찾아보긴 귀찮고 터미널에서 마크다운 문서를 preview로 바로 볼 수 있는 방법이 없을까 했는데, 안되는 건 없구나. ;Q</p>
-<p><a href="http://tosbourn.com/view-markdown-files-terminal/" target="_blank" rel="external">http://tosbourn.com/view-markdown-files-terminal/</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install pandoc</span><br><span class="line">brew install lynx</span><br></pre></td></tr></table></figure>
-<p>그리고 본인이 사용하는 쉘의 설정 파일에 아래 설정을 넣어 준다.<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">rmd</span></span> () &#123;</span><br><span class="line">  pandoc <span class="variable">$1</span> | lynx -stdin</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>그리고 새로운 셸에 접속하거나, source(.)로 설정파일을 리로드 한다. 끝.</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">rmd ~/blah/immarkdown.md</span><br></pre></td></tr></table></figure>
-<p>Pandoc으로 마크다운 문서를 html파일로 변환 뒤에 전설(적어도 나한테는)의 터미널 브라우져인 lynx를 통해서 열면 바로 볼 수 있는 것이다. </p>
-<p><img src="/images/lynx.png" alt="터미널에서 마크다운 문서 보기"><br>(이렇게 보니 vi로 열어서 보는 거랑 별 차이 없어 보이기는 하다…)</p>
-<p>다른 번에는 생활을 윤택하게 해주는 터미널 유틸리티를 소개해 봐야 겠다. </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/" data-id="ciifllre40008rojc23aeef7j" class="article-share-link">Share</a>
-      
-        <a href="http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/terminal/">terminal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tip/">tip</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/08/02/simple-node-js-script-for-download-tumblr-likes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          node.js로 like한 tumblr 사진, 동영상 백업
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2015/07/29/User-authentication-with-Sails-js/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Sails&#39;js 사용자 로그인 기능 구현 - 1편</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2015/07/28/getting-started-with-sailsjs/" class="archive-article-date">
+  <time datetime="2015-07-28T08:42:36.000Z" itemprop="datePublished">Jul 28</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/07/28/getting-started-with-sailsjs/">Sails&#39;js 소개 및 시작하기</a>
+    </h1>
+  
 
-
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </header>
   </div>
-</section>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2015/07/27/spf13-vim-Distribution/" class="archive-article-date">
+  <time datetime="2015-07-27T11:39:54.000Z" itemprop="datePublished">Jul 27</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/07/27/spf13-vim-Distribution/">vim 사용자를 위한 종합 패키지 spf13 Distribution</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 </section>
         
           <aside id="sidebar">
@@ -244,13 +229,11 @@ brew install pa">
 <script>
   var disqus_shortname = 'jaydee88';
   
-  var disqus_url = 'http://jaydee88.github.io/2015/07/31/view-markdown-file-in-terminal/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
