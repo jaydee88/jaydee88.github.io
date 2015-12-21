@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vim 사용자를 위한 종합 패키지 spf13 Distribution | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="개발 일을 처음 시작할 때 vi(m)을 처음 배웠는데 배운 이유가 간단 했다. 멋있어 보여서다. 검은 터미널 화면에서 vi(m)에디터 하나로 자동완성, 문법체킹 이런 거 하나 없이 한땀한땀 코드를 입력하는 게 멋있어 보여서 배우기 시작 했다. 그야말로 겉멋 개발자였던 셈이다. 
+시간이 지나고 새로운 대세 에디터들(textmate, sublime, atom)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim 사용자를 위한 종합 패키지 spf13 Distribution">
+<meta property="og:url" content="http://yoursite.com/2015/07/27/spf13-vim-Distribution/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="개발 일을 처음 시작할 때 vi(m)을 처음 배웠는데 배운 이유가 간단 했다. 멋있어 보여서다. 검은 터미널 화면에서 vi(m)에디터 하나로 자동완성, 문법체킹 이런 거 하나 없이 한땀한땀 코드를 입력하는 게 멋있어 보여서 배우기 시작 했다. 그야말로 겉멋 개발자였던 셈이다. 
+시간이 지나고 새로운 대세 에디터들(textmate, sublime, atom)">
+<meta property="og:image" content="http://yoursite.com/images/vim_learning.jpg">
+<meta property="og:image" content="http://yoursite.com/images/ctrlp.gif">
+<meta property="og:updated_time" content="2015-09-21T07:17:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vim 사용자를 위한 종합 패키지 spf13 Distribution">
+<meta name="twitter:description" content="개발 일을 처음 시작할 때 vi(m)을 처음 배웠는데 배운 이유가 간단 했다. 멋있어 보여서다. 검은 터미널 화면에서 vi(m)에디터 하나로 자동완성, 문법체킹 이런 거 하나 없이 한땀한땀 코드를 입력하는 게 멋있어 보여서 배우기 시작 했다. 그야말로 겉멋 개발자였던 셈이다. 
+시간이 지나고 새로운 대세 에디터들(textmate, sublime, atom)">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-spf13-vim-Distribution" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/27/spf13-vim-Distribution/" class="article-date">
+  <time datetime="2015-07-27T11:39:54.000Z" itemprop="datePublished">2015-07-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Coding/">Coding</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vim 사용자를 위한 종합 패키지 spf13 Distribution
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>개발 일을 처음 시작할 때 vi(m)을 처음 배웠는데 배운 이유가 간단 했다. 멋있어 보여서다. 검은 터미널 화면에서 vi(m)에디터 하나로 자동완성, 문법체킹 이런 거 하나 없이 한땀한땀 코드를 입력하는 게 멋있어 보여서 배우기 시작 했다. 그야말로 겉멋 개발자였던 셈이다. </p>
+<p>시간이 지나고 새로운 대세 에디터들(textmate, sublime, atom)이 나오면서 굳이 vi(m)을 쓸 필요가 없을 정도로 강려크한 에디터들이 등장 했다. 애정이 생긴 만큼 vi(m)을 계속 쓰고 싶었지만 vi(m)의 학습곡선이란게 이렇다. 손에 익숙해질만 하면 어려워지고…..아래 선처럼….</p>
+<p><img src="/images/vim_learning.jpg" alt="Vim Leaning Curve"> </p>
+<p>최근에는 <a href="https://www.sublimetext.com/" target="_blank" rel="external">sublime</a>으로 잘 써먹었고, 깃헙에서 나온 <a href="https://atom.io/" target="_blank" rel="external">Atom</a>에디터도 이쁘긴 한데 몇 메가짜리 로그 파일 열어보다가 느려지는 거 보곤 기겁해서 삭제해 버렸다. </p>
+<p>그러다가 요즘 <a href="http://livecoding.tv/" target="_blank" rel="external">라이브코딩 티비를</a> 보다 vi(m)으로 코딩하는 모습을 보면서 다시 vi(m)을 보다 보니 이런게 있어서 소개 해드릴려고 한다.</p>
+<p><a href="http://vim.spf13.com/" target="_blank" rel="external">spf13-vim - The Ultimate Vim Distribution</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://j.mp/spf13-vim3 -L -o - | sh</span><br></pre></td></tr></table></figure>
+<p>맥에서는 터미널에서 위 명령어만으로 수많은 bundle들이 설치 된다.</p>
+<p>게중에 <code>NERDTree</code>(토글 키는 <code>&lt;C-E&gt;</code>로 기본 바인딩되어 있다.)야 워낙에 유명하고, <code>ctrlp.vim</code>은 파일 명으로 바로 파일을 찾아서 열어주는 플러그인. 다른 에디터(sublime, atom)에는 기본 기능인데 vi(m)에도 되니깐 감동이다. ㅠ.ㅠ</p>
+<p><img src="/images/ctrlp.gif" alt="강려크한 ctrlp.vim"></p>
+<p>그밖에도 git관련 플러그인도 있고 이 정도면 sublime이나 atom 안 부럽다.<br>.vim디렉토리에 설치된 플러그인을 리스팅해보면 아래와 같이 많다… 아마 저게 어떤 플러그인인지는 몇 년이 지난 후에나 알 수 있지 않을 까 싶다.(이렇게 많은 플러그인 때문인지 vim 구동이 좀 무겁게 느껴진다.)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vundle&#10;vim-addon-mw-utils&#10;tlib_vim&#10;nerdtree&#10;vim-colors-solarized&#10;vim-colors&#10;vim-surround&#10;vim-repeat&#10;auto-pairs&#10;ctrlp.vim&#10;ctrlp-funky&#10;vim-multiple-cursors&#10;sessionman.vim&#10;matchit.zip&#10;vim-airline&#10;vim-bufferline&#10;vim-easymotion&#10;vim-nerdtree-tabs&#10;vim-colorschemes&#10;undotree&#10;vim-indent-guides&#10;restore_view.vim&#10;vim-signify&#10;vim-abolish&#10;vim-over&#10;vim-textobj-user&#10;vim-textobj-indent&#10;wildfire.vim&#10;vim-litecorrect&#10;vim-textobj-sentence&#10;vim-textobj-quote&#10;vim-wordy&#10;syntastic&#10;vim-fugitive&#10;webapi-vim&#10;gist-vim&#10;nerdcommenter&#10;vim-commentary&#10;tabular&#10;tagbar&#10;neocomplete.vim&#10;neosnippet&#10;neosnippet-snippets&#10;vim-snippets&#10;PIV&#10;vim-php-namespace&#10;vim-twig&#10;python-mode&#10;python.vim&#10;python_match.vim&#10;pythoncomplete&#10;vim-json&#10;vim-less&#10;vim-javascript&#10;vim-jst&#10;vim-coffee-script&#10;HTML-AutoCloseTag&#10;vim-css3-syntax&#10;vim-coloresque&#10;vim-haml&#10;vim-rails&#10;rust.vim&#10;vim-markdown&#10;vim-preview&#10;vim-cucumber&#10;vim-toml&#10;vim-cucumber-align-pipes&#10;salt-vim</span><br></pre></td></tr></table></figure>
+<p>아무튼 저같이 vi(m)을 사랑하지만 귀찮음에 한동안 vi(m)을 멀리 했던 동지(?)들이여 이 패키지로 다시 돌아오길 바란다. vi(m) 여전히 훌륭하고 멋진 에디터이다. </p>
+<p>덧.<br>맥에서 vi(m)을 사용하다 보면 입력 모드에서 커맨드 모드(esc)로 변경할 때 한글 입력기로 되어 있으면 은근 스트레쓰 받는데 구글링해보니 <a href="https://github.com/gureum/gureum" target="_blank" rel="external">구름 입력기</a> 설정에서  esc키 입력시에 로마자 자동변환 옵션이 있단다. 맥에서 vi(m)사용자라면 필히 설치 하자. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/27/spf13-vim-Distribution/" data-id="ciiflbvub000hgwjcycgkv5b1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/editor/">editor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spf13/">spf13</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/27/Busan-Startup-Cafe/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          부산 스타트업 카페 개소 소식
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/26/ESENS-Nu-shit/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ESENS Nu shit</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Coding/">Coding</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Startup/">Startup</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon-Dash/">Amazon Dash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centum-Park/">Centum Park</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESENS/">ESENS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IOT/">IOT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automated-deployment/">automated deployment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backup/">backup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/busan/">busan</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disqus/">disqus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/editor/">editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullstack-framework/">fullstack framework</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getting-started/">getting started</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/">jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/login/">login</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport-js/">passport.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sails-js/">sails.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soundcloud/">soundcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spf13/">spf13</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">startup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup-news/">startup news</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tumblr/">tumblr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Amazon-Dash/" style="font-size: 10px;">Amazon Dash</a> <a href="/tags/Centum-Park/" style="font-size: 10px;">Centum Park</a> <a href="/tags/ESENS/" style="font-size: 10px;">ESENS</a> <a href="/tags/IOT/" style="font-size: 10px;">IOT</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/automated-deployment/" style="font-size: 10px;">automated deployment</a> <a href="/tags/backup/" style="font-size: 10px;">backup</a> <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/busan/" style="font-size: 20px;">busan</a> <a href="/tags/ci/" style="font-size: 10px;">ci</a> <a href="/tags/disqus/" style="font-size: 10px;">disqus</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/fullstack-framework/" style="font-size: 10px;">fullstack framework</a> <a href="/tags/getting-started/" style="font-size: 10px;">getting started</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/passport-js/" style="font-size: 10px;">passport.js</a> <a href="/tags/sails-js/" style="font-size: 20px;">sails.js</a> <a href="/tags/soundcloud/" style="font-size: 10px;">soundcloud</a> <a href="/tags/spf13/" style="font-size: 10px;">spf13</a> <a href="/tags/startup/" style="font-size: 10px;">startup</a> <a href="/tags/startup-news/" style="font-size: 10px;">startup news</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a> <a href="/tags/tumblr/" style="font-size: 10px;">tumblr</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/09/10/Amazon-Dash/">Amazon Dash</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/14/Startup-Meetup-in-BUSAN/">Startup Meetup in BUSAN (15년 8월 13일)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/12/java-project-automated-deployment-in-jenkins/">Jenkins에서 자바 웹 프로젝트 자동 배포</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/03/disqus-comment-widget/">Hexo Disqus 위젯 추가</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/02/simple-node-js-script-for-download-tumblr-likes/">node.js로 like한 tumblr 사진, 동영상 백업</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

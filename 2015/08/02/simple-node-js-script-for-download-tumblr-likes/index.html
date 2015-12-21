@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>node.js로 like한 tumblr 사진, 동영상 백업 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="맥에서 내가 ‘like’한 텀블러 포스트의 이미지와 동영상만 백업하고 싶은데 구글링해보면 윈도우 프로그램이 몇 있거나, 전체를 백업하는 용도로만 있는 거 같다. 그래서 간단한 node.js로 간단한 스크립트를 만들었다. 개인적으로 node.js를 공부한 지 얼마 안되었으므로 태클달기 있귀업귀.
+
+tumblr의 rest api를 엑세스하기 위해서는 토큰이 필">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node.js로 like한 tumblr 사진, 동영상 백업">
+<meta property="og:url" content="http://yoursite.com/2015/08/02/simple-node-js-script-for-download-tumblr-likes/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="맥에서 내가 ‘like’한 텀블러 포스트의 이미지와 동영상만 백업하고 싶은데 구글링해보면 윈도우 프로그램이 몇 있거나, 전체를 백업하는 용도로만 있는 거 같다. 그래서 간단한 node.js로 간단한 스크립트를 만들었다. 개인적으로 node.js를 공부한 지 얼마 안되었으므로 태클달기 있귀업귀.
+
+tumblr의 rest api를 엑세스하기 위해서는 토큰이 필">
+<meta property="og:updated_time" content="2015-09-21T07:17:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node.js로 like한 tumblr 사진, 동영상 백업">
+<meta name="twitter:description" content="맥에서 내가 ‘like’한 텀블러 포스트의 이미지와 동영상만 백업하고 싶은데 구글링해보면 윈도우 프로그램이 몇 있거나, 전체를 백업하는 용도로만 있는 거 같다. 그래서 간단한 node.js로 간단한 스크립트를 만들었다. 개인적으로 node.js를 공부한 지 얼마 안되었으므로 태클달기 있귀업귀.
+
+tumblr의 rest api를 엑세스하기 위해서는 토큰이 필">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-simple-node-js-script-for-download-tumblr-likes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/02/simple-node-js-script-for-download-tumblr-likes/" class="article-date">
+  <time datetime="2015-08-01T19:14:57.000Z" itemprop="datePublished">2015-08-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Coding/">Coding</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      node.js로 like한 tumblr 사진, 동영상 백업
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>맥에서 내가 ‘like’한 텀블러 포스트의 이미지와 동영상만 백업하고 싶은데 구글링해보면 윈도우 프로그램이 몇 있거나, 전체를 백업하는 용도로만 있는 거 같다. 그래서 간단한 node.js로 간단한 스크립트를 만들었다. 개인적으로 node.js를 공부한 지 얼마 안되었으므로 태클달기 있귀업귀.</p>
+<ol>
+<li>tumblr의 rest api를 엑세스하기 위해서는 토큰이 필요한 데 먼저 <a href="https://www.tumblr.com/oauth/apps" target="_blank" rel="external">여기에 가서</a> 새로운 앱을 등록해야 한다. 나는 백업 사이트를 유령 앱을 만들었다. </li>
+<li>consumer_key, consumer_secret, token, token_secret 4개의 키가 필요한데 token과 token_secet는 텀블러 <a href="https://api.tumblr.com/console/calls/blog/likes" target="_blank" rel="external">api 콘솔 메뉴</a>에서 확인할 수 있었다. </li>
+</ol>
+<ul>
+<li>텀블러 api node.js 랩퍼 모듈 : <a href="https://github.com/tumblr/tumblr.js/" target="_blank" rel="external">https://github.com/tumblr/tumblr.js/</a></li>
+<li>디렉토리 생성(mkdirp)과 파일 다운로드(wget) 2가지 노드 모듈을 설치했다. npm으로 설치해야 한다.</li>
+</ul>
+<p>아래는 간단한 다운로드 스크립트다. </p>
+<script src="https://gist.github.com/anonymous/54f421ea0e4535c3eb0f.js"></script>
+
+<p>일단 졸려서 다운 받은 데이터만 확인하고 끝. </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/02/simple-node-js-script-for-download-tumblr-likes/" data-id="ciiflbvv3000pgwjcca65g3oe" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/backup/">backup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tumblr/">tumblr</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/03/disqus-comment-widget/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hexo Disqus 위젯 추가
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/31/view-markdown-file-in-terminal/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">터미널에서 마크다운 문서 보기</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Coding/">Coding</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Startup/">Startup</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon-Dash/">Amazon Dash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centum-Park/">Centum Park</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESENS/">ESENS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IOT/">IOT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automated-deployment/">automated deployment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backup/">backup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/busan/">busan</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disqus/">disqus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/editor/">editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullstack-framework/">fullstack framework</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getting-started/">getting started</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/">jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/login/">login</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport-js/">passport.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sails-js/">sails.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soundcloud/">soundcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spf13/">spf13</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">startup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup-news/">startup news</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tumblr/">tumblr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Amazon-Dash/" style="font-size: 10px;">Amazon Dash</a> <a href="/tags/Centum-Park/" style="font-size: 10px;">Centum Park</a> <a href="/tags/ESENS/" style="font-size: 10px;">ESENS</a> <a href="/tags/IOT/" style="font-size: 10px;">IOT</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/automated-deployment/" style="font-size: 10px;">automated deployment</a> <a href="/tags/backup/" style="font-size: 10px;">backup</a> <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/busan/" style="font-size: 20px;">busan</a> <a href="/tags/ci/" style="font-size: 10px;">ci</a> <a href="/tags/disqus/" style="font-size: 10px;">disqus</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/fullstack-framework/" style="font-size: 10px;">fullstack framework</a> <a href="/tags/getting-started/" style="font-size: 10px;">getting started</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/passport-js/" style="font-size: 10px;">passport.js</a> <a href="/tags/sails-js/" style="font-size: 20px;">sails.js</a> <a href="/tags/soundcloud/" style="font-size: 10px;">soundcloud</a> <a href="/tags/spf13/" style="font-size: 10px;">spf13</a> <a href="/tags/startup/" style="font-size: 10px;">startup</a> <a href="/tags/startup-news/" style="font-size: 10px;">startup news</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a> <a href="/tags/tumblr/" style="font-size: 10px;">tumblr</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/09/10/Amazon-Dash/">Amazon Dash</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/14/Startup-Meetup-in-BUSAN/">Startup Meetup in BUSAN (15년 8월 13일)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/12/java-project-automated-deployment-in-jenkins/">Jenkins에서 자바 웹 프로젝트 자동 배포</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/03/disqus-comment-widget/">Hexo Disqus 위젯 추가</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/02/simple-node-js-script-for-download-tumblr-likes/">node.js로 like한 tumblr 사진, 동영상 백업</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Sails&#39;js 소개 및 시작하기 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 node.js기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 0.11.0이고 구글링 한국어로는 페이지가 몇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sails'js 소개 및 시작하기">
+<meta property="og:url" content="http://yoursite.com/2015/07/28/getting-started-with-sailsjs/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 node.js기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 0.11.0이고 구글링 한국어로는 페이지가 몇">
+<meta property="og:image" content="http://yoursite.com/images/sailsjslogo.png">
+<meta property="og:updated_time" content="2015-09-21T07:17:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sails'js 소개 및 시작하기">
+<meta name="twitter:description" content="최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 node.js기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 0.11.0이고 구글링 한국어로는 페이지가 몇">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-getting-started-with-sailsjs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/28/getting-started-with-sailsjs/" class="article-date">
+  <time datetime="2015-07-28T08:42:36.000Z" itemprop="datePublished">2015-07-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Coding/">Coding</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Sails&#39;js 소개 및 시작하기
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>최근에 간단한 앱 API서버 프로토타입을 만들 일이 생겨서 검색으로 조사해봤다. 일단 일의 메인 프로젝트가 자바기반이긴 하지만 프로토타입을 만드는 서브 프로젝트라서 자바는 배제를 시켰고 최근에 관심을(아니 관심만) 가지고 있는 <code>node.js</code>기반의 프레임워크를 찾다가 관심을 가지게 된 프레임워크다. 현재 버전은 <code>0.11.0</code>이고 구글링 한국어로는 페이지가 몇 안 나오는 걸로 보아 인기가 얻거나 나온지 얼마 안됬구나 했는데 Git 히스토리를 보니 대략 2012년부터 해온 프로젝트다. </p>
+<p>Mike Mcneil(<a href="https://www.linkedin.com/in/mikermcneil" target="_blank" rel="external">https://www.linkedin.com/in/mikermcneil</a>) 이라는 친구가 처음 만들어서 오픈소스로 올렸고 처음에는 rails like한 node’js 프레임워크를 만들려고 했던 것으로 보인다. 그래서 이름 역시 (ruby on) rails와 유사한 sails(‘js)이다. 이 친구가 sails’js기반으로 테크 스타트업회사인 treeline(<a href="https://treeline.io/" target="_blank" rel="external">https://treeline.io/</a>) 을 하고 있다. treeline에 올라온 영상을 보면 알겠지만 코딩 없이 앱이나 모바일/웹 서비스의 백엔드를 만들어주는 서비스로 보인다. 개인적으로 sails’js에 관심을 가지는 이유는 사물인터넷의 백엔드 프레임워크로 괜찮다(아직까진)라는 느낌을 받아서인데 확신은 없지만 괜찮은 선택으로 보인다. </p>
+<p>sails’js 관련 글을 몇 개 더 올릴 생각인데, 먼저 나 스스로가 node’js를 실제 업무에서 사용하는 개발자가 아님을 염두에 두길 바란다. 잘못된 부분있으면 댓글을 달아주시고 댓글을 확인하면 아무도 모르게 슬쩍 고쳐놓겠다. 그리고 가장 중요한 점은 나 스스토로 공부하기(삽질하기 위해서) 위해서 정리 겸 해서 올리는 포스팅이다. 결국엔 나도 잘 모른다는 이야기다. ;Q</p>
+<h2 id="Sails’js?">Sails’js?</h2><p><img src="/images/sailsjslogo.png" alt="Sails&#39;js"></p>
+<ul>
+<li>site : <a href="http://sailsjs.org/" target="_blank" rel="external">Sails’s js</a></li>
+<li>Github : <a href="https://github.com/balderdashy/sails" target="_blank" rel="external">https://github.com/balderdashy/sails</a></li>
+</ul>
+<p>당근 자바스크립트 언어 구성이고, 내부적으로 Waterline이라는 ORM 플러그인을 내장하고 있어서 기존 Mysql과 같은 SQL기반 데이터베이스뿐만 아니라 MongoDB같은 noSQL 데이터베이스도 사용이 가능하고 모델을 통한 쿼리도 가능하다. 모바일 앱이나 게임에서 필요한 REST API 바로 생성할 수 있는 기능은 프로토타입핑하기엔 편리하다. 웹소켓 기능도 기본으로 들어가 있는데 아직까진 사용해본 적이 없어서 모르겠고 위 2가지 사항만으로도 충분한 강점이 있어 보인다. </p>
+<p>설치는 <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>으로 간편 설치.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -g install sails</span><br></pre></td></tr></table></figure>
+<p>npm을 사용하기 이전에 시스템에 node가 설치되어 있어야 한다. </p>
+<p>다음 포스트에서 간단하게 로그인 기능을 구현하는 방법을 올려 보겠다. </p>
+<p>sails’s 관련 링크 </p>
+<ul>
+<li><a href="https://github.com/balderdashy/sails-docs/blob/master/FAQ.md#what-are-some-good-community-tutorials" target="_blank" rel="external">What are some good community tutorials?</a></li>
+<li><a href="https://sailsjs-documentation.readthedocs.org/en/latest/" target="_blank" rel="external">Sails’js Documentation</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/28/getting-started-with-sailsjs/" data-id="ciiflbvwa0015gwjczeu1kgav" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fullstack-framework/">fullstack framework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/getting-started/">getting started</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sails-js/">sails.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/07/29/User-authentication-with-Sails-js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Sails&#39;js 사용자 로그인 기능 구현 - 1편
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/07/27/Busan-Startup-Cafe/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">부산 스타트업 카페 개소 소식</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Coding/">Coding</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Startup/">Startup</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon-Dash/">Amazon Dash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Centum-Park/">Centum Park</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESENS/">ESENS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IOT/">IOT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automated-deployment/">automated deployment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backup/">backup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/busan/">busan</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/disqus/">disqus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/editor/">editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullstack-framework/">fullstack framework</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getting-started/">getting started</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jenkins/">jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/login/">login</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/passport-js/">passport.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sails-js/">sails.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soundcloud/">soundcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spf13/">spf13</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">startup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup-news/">startup news</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tip/">tip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tumblr/">tumblr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Amazon-Dash/" style="font-size: 10px;">Amazon Dash</a> <a href="/tags/Centum-Park/" style="font-size: 10px;">Centum Park</a> <a href="/tags/ESENS/" style="font-size: 10px;">ESENS</a> <a href="/tags/IOT/" style="font-size: 10px;">IOT</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/automated-deployment/" style="font-size: 10px;">automated deployment</a> <a href="/tags/backup/" style="font-size: 10px;">backup</a> <a href="/tags/blog/" style="font-size: 20px;">blog</a> <a href="/tags/busan/" style="font-size: 20px;">busan</a> <a href="/tags/ci/" style="font-size: 10px;">ci</a> <a href="/tags/disqus/" style="font-size: 10px;">disqus</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/fullstack-framework/" style="font-size: 10px;">fullstack framework</a> <a href="/tags/getting-started/" style="font-size: 10px;">getting started</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/login/" style="font-size: 10px;">login</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/passport-js/" style="font-size: 10px;">passport.js</a> <a href="/tags/sails-js/" style="font-size: 20px;">sails.js</a> <a href="/tags/soundcloud/" style="font-size: 10px;">soundcloud</a> <a href="/tags/spf13/" style="font-size: 10px;">spf13</a> <a href="/tags/startup/" style="font-size: 10px;">startup</a> <a href="/tags/startup-news/" style="font-size: 10px;">startup news</a> <a href="/tags/terminal/" style="font-size: 10px;">terminal</a> <a href="/tags/tip/" style="font-size: 10px;">tip</a> <a href="/tags/tumblr/" style="font-size: 10px;">tumblr</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/09/10/Amazon-Dash/">Amazon Dash</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/14/Startup-Meetup-in-BUSAN/">Startup Meetup in BUSAN (15년 8월 13일)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/12/java-project-automated-deployment-in-jenkins/">Jenkins에서 자바 웹 프로젝트 자동 배포</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/03/disqus-comment-widget/">Hexo Disqus 위젯 추가</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/02/simple-node-js-script-for-download-tumblr-likes/">node.js로 like한 tumblr 사진, 동영상 백업</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
