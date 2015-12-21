@@ -124,7 +124,7 @@ body,
 }
 body {
   background: #eee;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -187,6 +187,7 @@ body {
     margin: 0 0.8333333333333%;
   }
 }
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 .article-date,
 .article-category-link,
 .archive-year,
@@ -357,22 +358,23 @@ body {
 }
 #header-title {
   text-align: center;
-  height: 40px;
+  height: 30px;
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -20px;
+  margin-top: -15px;
 }
 #logo,
 #subtitle {
   text-decoration: none;
-  color: #fff;
+  color: #f4fdff;
   font-weight: 300;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 5px 4px rgba(0,0,0,0.3);
+  background-color: #423737;
 }
 #logo {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 30px;
   letter-spacing: 2px;
 }
 #subtitle {
@@ -484,7 +486,7 @@ body {
   background: none;
   color: #555;
   width: 100%;
-  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 13px "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   outline: none;
 }
 .search-form-input::-webkit-search-results-decoration,
@@ -625,7 +627,7 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Nanum Gothic", Georgia, "Times New Roman", serif;
   font-size: 1.4em;
   margin: 1.6em 20px;
   text-align: center;
@@ -633,7 +635,7 @@ a.article-title:hover {
 .article-entry blockquote footer {
   font-size: 14px;
   margin: 1.6em 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -841,7 +843,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0 15px;
   color: #555;
   outline: none;
@@ -1200,7 +1202,7 @@ a.article-title:hover {
 .article-entry .gist .gist-file .gist-meta {
   background: #2d2d2d;
   color: #999;
-  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 0.85em "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -1377,4 +1379,36 @@ pre .javascript .function {
 .tagcloud a {
   margin-right: 5px;
   display: inline-block;
+}
+.dsq-widget ul.dsq-widget-list {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+img.dsq-widget-avatar {
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px 3px 3px 0px;
+  float: left;
+}
+li.dsq-widget-item {
+  margin: 15px 0;
+  list-style-type: none;
+  clear: both;
+}
+span.dsq-widget-clout {
+  padding: 0 2px;
+  background-color: #ff7300;
+  color: #fff;
+}
+a.dsq-widget-thread {
+  font-weight: bold;
+}
+table.dsq-widget-horiz td {
+  padding-right: 15px;
+}
+.dsq-widget-comment p {
+  display: inline;
 }
